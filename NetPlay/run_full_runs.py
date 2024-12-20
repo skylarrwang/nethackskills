@@ -53,8 +53,8 @@ Here are some survival tips:
 - You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.
 """
 
-RUN_PY = "/workspaces/nethack_llm/run.py"
-LOG_FOLDER = "/workspaces/nethack_llm/runs"
+RUN_PY = "/Users/srwang/Documents/pathways_fall/NetPlay/run.py"
+LOG_FOLDER = "/Users/srwang/Documents/pathways_fall/logs"
 
 if __name__ == "__main__":
     # Parse args
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     parser.add_argument('-seeds', nargs="+", type=int, default=None, help="Specify a list of integer seeds for each run.")
     parser.add_argument('-num_runs', nargs="+", type=int, default=30, help="Specify how many runs to run. Will be ignored if -seeds is set.")
     parser.add_argument('-role', type=str, default="valkyrie", choices=ALLOWED_ROLES, help="The role the agent will use.")
-    parser.add_argument('-model', type=str, default="gpt-4-1106-preview", help="Choose the OpenAI language model to use.")
+    parser.add_argument('-model', type=str, default="gpt-4o-mini", help="Choose the OpenAI language model to use.")
     parser.add_argument('--censor_nethack_context', action='store_true', help="Censors any mentions of the word 'NetHack' before passing prompts to the LLM.")
     parser.add_argument('--render', default=False, action='store_true', help="Renders each run in an window.")
     parser.add_argument('--use_guide', default=False, action='store_true', help="When set the agent gets access to a guide for playing the game.")
