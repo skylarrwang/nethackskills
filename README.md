@@ -1,6 +1,6 @@
 # NetHack Strategy API
 ## Overview
-This repository builds upon the **NetPlay** by extending its capabilities with **strategy abstraction** for guiding agents through high-level gameplay objectives. The **Strategy API** enhances the existing framework by introducing reusable strategies to enable more effective exploration of NetHack's early game. 
+This repository builds upon the **NetPlay** by extending its capabilities with **strategy abstraction** for guiding agents through high-level gameplay objectives. The **Strategy API** enhances the existing framework by introducing reusable strategies to enable more effective exploration of NetHack's early game. Also building out a **Skill API** that is a wrapper for the RL environment, not fully completed.
 
 ---
 
