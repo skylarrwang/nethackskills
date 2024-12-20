@@ -1,0 +1,63 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (17, 4).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message ''.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 3 which contains:\nNo objects or features\n\nroom 2 reachable in 1 steps contains:\n- horizontal open door at (19,7) reachable in 3 steps\n\nroom 4 currently unreachable contains:\n- splint mail at (5,7) currently unreachable\n\ncorridor 1 reachable in 4 steps contains:\n- horizontal open door at (19,7) reachable in 3 steps\n\nroom 0 reachable in 10 steps contains:\n- stairs up at (22,15) reachable in 11 steps\n\nClose Monsters:\n- tame little dog at (20,6) 3 steps south-east\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 3 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 7 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 21\ndexterity: 11\nconstitution: 15\nintelligence: 14\nwisdom: 8\ncharisma: 9\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 7\nlevel: 1\nexp: 0\nscore: 7\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have reached corridor 3, which is empty. I can see that room 2 has an open door leading to it, and I can also see a tame little dog nearby. There are no immediate threats, and I have the option to explore further or check out room 2.\",\n        \"reasoning\": \"Since room 2 is accessible and has an open door, I should investigate it to see if there are any items or monsters present. This will help me gain experience and loot.\",\n        \"speak\": \"I'll head into room 2 to see what I can find.\"\n    },\n    \"skill\": {\n        \"name\": \"go_to\",\n        \"room_id\": 2\n    }\n}",
+    "context": [
+        {
+            "ai": "I'll grab the gold piece first and then explore the room for more opportunities."
+        },
+        {
+            "system": "Executing skill 'pickup 21 15'."
+        },
+        {
+            "system": "Moving to (21,15)"
+        },
+        {
+            "system": "You see here 7 gold pieces."
+        },
+        {
+            "system": "$ - 7 gold pieces."
+        },
+        {
+            "system": "Skill 'pickup 21 15' completed"
+        },
+        {
+            "ai": "Let's explore the level to find more loot and experience."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 1"
+        },
+        {
+            "system": "The door opens.\nFound a new room with ID 2"
+        },
+        {
+            "system": "Found a new corridor with ID 3"
+        },
+        {
+            "system": "Found a new room with ID 4\nA splint mail appeared at (5,7)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A splint mail appeared at (5,7).'."
+        },
+        {
+            "ai": "Let's head towards the open door in room 2 and see what we can find."
+        },
+        {
+            "system": "Executing skill 'go_to 2'."
+        },
+        {
+            "system": "Skill 'go_to 2' completed: Reached the room with id 2"
+        },
+        {
+            "ai": "Let's check out corridor 3 and see what we can find."
+        },
+        {
+            "system": "Executing skill 'go_to 3'."
+        },
+        {
+            "system": "Skill 'go_to 3' completed: Reached the corridor with id 3"
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing a partially observable rogue-like.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (42, 3).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'What do you want to read? [*]'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 1 which contains:\n- scroll labeled STRC PRST SKRZ KRK at (42,3) reachable in 0 steps\n- vertical closed door at (48,5) reachable in 6 steps\n\ncorridor 2 reachable in 7 steps contains:\n- vertical closed door at (48,5) reachable in 6 steps\n- kobold corpse at (53,5) reachable in 11 steps\n\nroom 0 reachable in 15 steps contains:\n- stairs up at (57,4) reachable in 16 steps\n- fox corpse at (59,6) reachable in 17 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 1 can be further explored.\nvertical closed door at (48, 5) blocks progress in room 1.\ncorridor 2 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 9 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: 2 food rations\nf: a dwarvish mithril-coat\ng: a smoky potion\nh: a lichen corpse\ni: a long sword\nj: 10 darts\nk: a jackal corpse\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 20\ndexterity: 11\nconstitution: 18\nintelligence: 9\nwisdom: 8\ncharisma: 9\nenergy: 1 / 1\ndepth: 2\ndungeon number: 0\ngold: 9\nlevel: 1\nexp: 16\nscore: 123\nencumbrance: unencumbered\nhunger: hungry\nalignment: Lawful\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I attempted to read the scroll labeled STRC PRST SKRZ KRK, but it seems I don't have the correct object in my inventory. I need to ensure I have the scroll before trying to read it again.\",\n        \"reasoning\": \"Since I can't read the scroll, I should consider picking it up first. After that, I can explore further or check my inventory for food since I'm feeling hungry.\",\n        \"speak\": \"I need to pick up the scroll before I can read it.\"\n    },\n    \"skill\": {\n        \"name\": \"pickup\",\n        \"x\": 42,\n        \"y\": 3\n    }\n}",
+    "context": [
+        {
+            "ai": "Let's see if the kobold corpse has anything useful before we continue exploring."
+        },
+        {
+            "system": "Executing skill 'pickup 53 5'."
+        },
+        {
+            "system": "Moving to (53,5)"
+        },
+        {
+            "system": "You see here a kobold corpse."
+        },
+        {
+            "system": "You have a little trouble lifting m - a kobold corpse.--More--"
+        },
+        {
+            "system": "Your movements are slowed slightly because of your load."
+        },
+        {
+            "system": "Skill 'pickup 53 5' completed"
+        },
+        {
+            "ai": "I should drop the kobold corpse to lighten my load and then continue exploring."
+        },
+        {
+            "system": "Executing skill 'drop m'."
+        },
+        {
+            "system": "What do you want to drop? [$a-km or ?*]"
+        },
+        {
+            "system": "Pressing key 'm'."
+        },
+        {
+            "system": "You drop a kobold corpse.  Your movements are now unencumbered."
+        },
+        {
+            "system": "Skill 'drop m' completed"
+        },
+        {
+            "ai": "Let's keep exploring this corridor for more opportunities."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "You are beginning to feel hungry."
+        },
+        {
+            "system": "A scroll labeled STRC PRST SKRZ KRK appeared at (42,3)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A scroll labeled STRC PRST SKRZ KRK appeared at (42,3).'."
+        },
+        {
+            "ai": "I found a scroll nearby. Let's check it out and see if it can help us."
+        },
+        {
+            "system": "Executing skill 'move_to 42 3'."
+        },
+        {
+            "system": "You see here a scroll labeled STRC PRST SKRZ KRK."
+        },
+        {
+            "system": "Skill 'move_to 42 3' completed: Reached position (42, 3)."
+        },
+        {
+            "ai": "I found a scroll! Let's read it and see what it does."
+        },
+        {
+            "system": "Executing skill 'read n'."
+        },
+        {
+            "system": "What do you want to read? [*]"
+        },
+        {
+            "system": "Pressing key 'n'."
+        },
+        {
+            "system": "You don't have that object.--More--"
+        },
+        {
+            "system": "What do you want to read? [*]"
+        },
+        {
+            "system": "Skill 'read n' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        }
+    ]
+}

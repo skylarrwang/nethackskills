@@ -1,0 +1,135 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing a partially observable rogue-like.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (13, 4).\n        avoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\n        Game message 'Pick up what?\nWeapons\na - 10 darts\nb - a long sword\n(end)'.\n        You haven't prayed yet.\n\nRooms:\nYou are in room 12 which contains:\n- horizontal open door at (12,1) reachable in 3 steps\n- stairs down at (11,3) reachable in 2 steps\n- vertical open door at (10,4) reachable in 3 steps\n- dart at (13,4) reachable in 0 steps\n\ncorridor 15 reachable in 2 steps contains:\n- vertical open door at (10,4) reachable in 3 steps\n- vertical open door at (28,4) reachable in 15 steps\n\nroom 16 reachable in 16 steps contains:\n- vertical open door at (28,4) reachable in 15 steps\n- horizontal open door at (33,5) reachable in 21 steps\n- horizontal open door at (38,5) reachable in 26 steps\n\ncorridor 7 reachable in 39 steps contains:\n- lichen corpse at (45,13) reachable in 40 steps\n\nroom 6 reachable in 52 steps contains:\nNo objects or features\n\ncorridor 1 reachable in 71 steps contains:\nNo objects or features\n\nroom 0 reachable in 84 steps contains:\n- stairs up at (74,7) reachable in 85 steps\n- sink at (75,7) reachable in 85 steps\n\ncorridor 17 reachable in 22 steps contains:\n- horizontal open door at (33,5) reachable in 21 steps\n- horizontal open door at (28,12) reachable in 23 steps\n\ncorridor 18 reachable in 27 steps contains:\n- horizontal open door at (38,5) reachable in 26 steps\n\ncorridor 5 reachable in 58 steps contains:\nNo objects or features\n\ncorridor 3 reachable in 88 steps contains:\nNo objects or features\n\nroom 14 reachable in 12 steps contains:\nNo objects or features\n\nroom 2 reachable in 64 steps contains:\nNo objects or features\n\nroom 10 reachable in 14 steps contains:\n- horizontal open door at (28,12) reachable in 23 steps\n- newt corpse at (20,15) reachable in 14 steps\n- vertical open door at (30,16) reachable in 24 steps\n\nroom 8 reachable in 31 steps contains:\n- lichen corpse at (39,13) reachable in 33 steps\n\nroom 4 reachable in 93 steps contains:\nNo objects or features\n\ncorridor 9 reachable in 25 steps contains:\n- vertical open door at (30,16) reachable in 24 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 15 can be further explored.\nroom 12 can be further explored.\nroom 16 can be further explored.\nroom 14 can be further explored.\n\nInventory:\n$: 7 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: 2 food rations\nf: a dwarvish mithril-coat\ng: a smoky potion\nh: a lichen corpse\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 20\ndexterity: 11\nconstitution: 18\nintelligence: 9\nwisdom: 8\ncharisma: 9\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 7\nlevel: 1\nexp: 10\nscore: 47\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I reached room 12 and encountered a dart trap. I managed to escape it and found 10 darts and a long sword. However, I couldn't pick up the items due to an error in the command.\",\n        \"reasoning\": \"I need to pick up the long sword since it could be a better weapon than my current dagger. After that, I can explore further in room 12 or check out corridor 15.\",\n        \"speak\": \"I need to grab the long sword from this room before moving on.\"\n    },\n    \"skill\": {\n        \"name\": \"press_key\",\n        \"key\": \"b\"\n    }\n}",
+    "context": [
+        {
+            "system": "The newt misses!"
+        },
+        {
+            "system": "You miss the newt.  The newt bites!"
+        },
+        {
+            "system": "You kill the newt!"
+        },
+        {
+            "system": "Skill 'go_to 17' completed: Reached the corridor with id 17"
+        },
+        {
+            "ai": "I need to explore corridor 15 to see what I can find."
+        },
+        {
+            "system": "Executing skill 'go_to 15'."
+        },
+        {
+            "system": "You swap places with your kitten."
+        },
+        {
+            "system": "A grid bug appeared at (38,4)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A grid bug appeared at (38,4).'."
+        },
+        {
+            "ai": "I need to take care of that grid bug before I continue exploring."
+        },
+        {
+            "system": "Executing skill 'melee_attack 38 4'."
+        },
+        {
+            "system": "You swap places with your kitten."
+        },
+        {
+            "system": "You kill the grid bug!"
+        },
+        {
+            "system": "Skill 'melee_attack 38 4' completed: Killed the target."
+        },
+        {
+            "ai": "Let's explore corridor 15 to see what we can find."
+        },
+        {
+            "system": "Executing skill 'go_to 15'."
+        },
+        {
+            "system": "Skill 'go_to 15' completed: Reached the corridor with id 15"
+        },
+        {
+            "ai": "Let's head into room 12 and see what treasures await us."
+        },
+        {
+            "system": "Executing skill 'go_to 12'."
+        },
+        {
+            "system": "A newt appeared at (20,5)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A newt appeared at (20,5).'."
+        },
+        {
+            "ai": "There's a newt nearby that I need to take care of before I can explore room 12."
+        },
+        {
+            "system": "Executing skill 'melee_attack 20 5'."
+        },
+        {
+            "system": "You miss the newt."
+        },
+        {
+            "system": "You miss the newt."
+        },
+        {
+            "system": "You miss the newt.  The newt bites!"
+        },
+        {
+            "system": "You miss the newt.  The newt bites!"
+        },
+        {
+            "system": "You miss the newt."
+        },
+        {
+            "system": "You miss the newt."
+        },
+        {
+            "system": "You kill the newt!"
+        },
+        {
+            "system": "Skill 'melee_attack 20 5' completed: Killed the target."
+        },
+        {
+            "ai": "Let's check out room 12 and see what treasures or challenges await us."
+        },
+        {
+            "system": "Executing skill 'go_to 12'."
+        },
+        {
+            "system": "Skill 'go_to 12' completed: Reached the room with id 12"
+        },
+        {
+            "ai": "I think I'll grab the dart before deciding on my next move."
+        },
+        {
+            "system": "Executing skill 'pickup 13 4'."
+        },
+        {
+            "system": "Moving to (13,4)"
+        },
+        {
+            "system": "There is a dart trap here.--More--"
+        },
+        {
+            "system": "Things that are here:\n10 darts\na long sword\n--More--"
+        },
+        {
+            "system": "You escape a dart trap."
+        },
+        {
+            "system": "Pick up what?\nWeapons\na - 10 darts\nb - a long sword\n(end)"
+        },
+        {
+            "system": "Skill 'pickup 13 4' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        }
+    ]
+}

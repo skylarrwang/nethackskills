@@ -1,0 +1,141 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (59, 8).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message ''.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 6 which contains:\n- lichen statue at (59,4) reachable in 4 steps\n- gold piece at (57,8) reachable in 2 steps\n- stairs down at (59,8) reachable in 0 steps\n\nroom 2 reachable in 58 steps contains:\n- vertical closed door at (16,3) reachable in 59 steps\n\nroom 5 reachable in 36 steps contains:\nNo objects or features\n\ncorridor 1 reachable in 51 steps contains:\nNo objects or features\n\ncorridor 3 reachable in 2 steps contains:\n- jackal corpse at (32,11) reachable in 30 steps\n\nroom 7 currently unreachable contains:\nNo objects or features\n\nroom 0 reachable in 47 steps contains:\n- stairs up at (14,14) reachable in 48 steps\n\nroom 4 reachable in 32 steps contains:\nNo objects or features\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nvertical closed door at (16, 3) blocks progress in room 2.\nroom 5 can be further explored.\nroom 6 can be further explored.\ncorridor 3 can be further explored.\nroom 4 can be further explored.\n\nInventory:\n$: 9 gold pieces\na: a rusty +1 long sword\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield\nd: an uncursed food ration\ne: an uncursed oil lamp\ng: a fizzy potion\nh: a cursed two-handed sword (weapon in hands)\ni: a tin opener\n\nStats:\nHP: 16 / 16\narmor class: 10\nstrength: 20\ndexterity: 10\nconstitution: 18\nintelligence: 9\nwisdom: 9\ncharisma: 12\nenergy: 2 / 2\ndepth: 2\ndungeon number: 0\ngold: 9\nlevel: 1\nexp: 8\nscore: 91\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Neutral\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have reached the stairs down at (59,8) but noticed a gold piece appeared at (57,8) nearby. I currently have 9 gold pieces and could increase my wealth by picking it up. However, I also have the option to explore the next level.\",\n        \"reasoning\": \"Since I am still on the first two levels, I should prioritize collecting resources before moving down. I will pick up the gold piece first and then decide whether to explore the new level or continue exploring this one.\",\n        \"speak\": \"I should grab that gold piece before heading down the stairs.\"\n    },\n    \"skill\": {\n        \"name\": \"pickup\",\n        \"x\": 57,\n        \"y\": 8\n    }\n}",
+    "context": [
+        {
+            "system": "Interrupting skill to rethink because 'A gold piece appeared at (24,5).'."
+        },
+        {
+            "ai": "I will go pick up the gold piece to increase my wealth."
+        },
+        {
+            "system": "Executing skill 'pickup 24 5'."
+        },
+        {
+            "system": "Moving to (24,5)"
+        },
+        {
+            "system": "You see here 3 gold pieces."
+        },
+        {
+            "system": "$ - 3 gold pieces."
+        },
+        {
+            "system": "Skill 'pickup 24 5' completed"
+        },
+        {
+            "ai": "I found some gold and a fortune cookie. Let's grab that cookie next!"
+        },
+        {
+            "system": "Executing skill 'pickup 30 4'."
+        },
+        {
+            "system": "Moving to (30,4)"
+        },
+        {
+            "system": "You see here a fortune cookie."
+        },
+        {
+            "system": "j - a fortune cookie."
+        },
+        {
+            "system": "Skill 'pickup 30 4' completed"
+        },
+        {
+            "ai": "I will read the fortune cookie to see what it has to offer."
+        },
+        {
+            "system": "Executing skill 'read j'."
+        },
+        {
+            "system": "What do you want to read? [*]"
+        },
+        {
+            "system": "Pressing key 'j'."
+        },
+        {
+            "system": "You break up the cookie and throw away the pieces.--More--"
+        },
+        {
+            "system": "This cookie has a scrap of paper inside.  It reads:--More--"
+        },
+        {
+            "system": "A crystal plate mail will not rust."
+        },
+        {
+            "system": "Skill 'read j' completed"
+        },
+        {
+            "ai": "I found a fortune cookie that mentioned a crystal plate mail. Now, I should explore further to see what else I can find."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "You see here a jackal corpse."
+        },
+        {
+            "system": "Your fox corpse rots away."
+        },
+        {
+            "system": "Found a new room with ID 6\nFound a new room with ID 7"
+        },
+        {
+            "system": "A lichen statue appeared at (59,4)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A lichen statue appeared at (59,4).'."
+        },
+        {
+            "ai": "Let's check out room 6 and see what we can find."
+        },
+        {
+            "system": "Executing skill 'go_to 6'."
+        },
+        {
+            "system": "A stairs down appeared at (59,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A stairs down appeared at (59,8).'."
+        },
+        {
+            "ai": "Let's check out room 5 before heading down the stairs."
+        },
+        {
+            "system": "Executing skill 'go_to 5'."
+        },
+        {
+            "system": "You see here a jackal corpse."
+        },
+        {
+            "system": "Skill 'go_to 5' completed: Reached the room with id 5"
+        },
+        {
+            "ai": "I will head to room 6 to check out the lichen statue and the stairs."
+        },
+        {
+            "system": "Executing skill 'go_to 6'."
+        },
+        {
+            "system": "You see here a jackal corpse."
+        },
+        {
+            "system": "Skill 'go_to 6' completed: Reached the room with id 6"
+        },
+        {
+            "ai": "I'm going to head down the stairs to explore the next level."
+        },
+        {
+            "system": "Executing skill 'down 59 8'."
+        },
+        {
+            "system": "Moving to (59,8)"
+        },
+        {
+            "system": "A gold piece appeared at (57,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A gold piece appeared at (57,8).'."
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (30, 10).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'You see here a dart.  The goblin hits!'.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 1 which contains:\n- vertical open door at (25,6) reachable in 10 steps\n- orcish dagger at (29,10) reachable in 1 steps\n- dart at (30,10) reachable in 0 steps\n- kobold corpse at (26,11) reachable in 4 steps\n\nroom 4 currently unreachable contains:\n- gold piece at (44,4) currently unreachable\n- vertical open door at (53,4) currently unreachable\n- stairs down at (44,6) currently unreachable\n\ncorridor 3 reachable in 17 steps contains:\n- vertical open door at (31,7) reachable in 16 steps\n\nroom 2 reachable in 11 steps contains:\n- vertical open door at (25,6) reachable in 10 steps\n- lichen corpse at (26,7) reachable in 12 steps\n- vertical open door at (31,7) reachable in 16 steps\n\nroom 0 reachable in 9 steps contains:\n- stairs up at (25,15) reachable in 9 steps\n- vertical open door at (13,16) reachable in 21 steps\n- scroll labeled FNORD at (22,16) reachable in 12 steps\n- fountain at (24,16) reachable in 10 steps\n\nClose Monsters:\n- jackal at (22,10) 8 steps west\n- tame kitten at (28,10) 2 steps west\n- goblin at (31,10) 1 steps east\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 4 can be further explored.\ncorridor 3 can be further explored.\ncorridor 1 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 14 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: 2 uncursed food rations\ne: a scroll labeled ABRA KA DABRA\nf: 12 darts\ng: a kobold corpse\n\nStats:\nHP: 15 / 18\narmor class: 6\nstrength: 19\ndexterity: 12\nconstitution: 19\nintelligence: 9\nwisdom: 8\ncharisma: 8\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 14\nlevel: 1\nexp: 19\nscore: 90\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\nHere is general advice: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I attacked the goblin, but it hit me back. Another orcish dagger appeared nearby, and I need to be cautious of my health. The goblin is still a threat, and I need to eliminate it quickly to avoid further damage.\",\n        \"reasoning\": \"I should continue to attack the goblin to defeat it before it can throw more daggers at me. After dealing with the goblin, I can consider picking up the orcish dagger and the dart.\",\n        \"speak\": \"I need to finish off the goblin quickly to avoid more damage.\"\n    },\n    \"skill\": {\n        \"name\": \"melee_attack\",\n        \"x\": 31,\n        \"y\": 10\n    }\n}",
+    "context": [
+        {
+            "ai": "Let's check the kobold corpse for any items."
+        },
+        {
+            "system": "Executing skill 'loot 27 10'."
+        },
+        {
+            "system": "Loot in what direction?"
+        },
+        {
+            "system": "Skill 'loot 27 10' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'move_to' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'move_to' does not exist.'."
+        },
+        {
+            "ai": "I need to confirm my action to loot the kobold corpse."
+        },
+        {
+            "system": "Executing skill 'press_key enter'."
+        },
+        {
+            "system": "Pressing key 'enter'."
+        },
+        {
+            "system": "Never mind."
+        },
+        {
+            "system": "Skill 'press_key enter' completed"
+        },
+        {
+            "ai": "I need to check the kobold corpse for any useful items."
+        },
+        {
+            "system": "Executing skill 'loot 27 10'."
+        },
+        {
+            "system": "Loot in what direction?"
+        },
+        {
+            "system": "Skill 'loot 27 10' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        },
+        {
+            "ai": "I need to confirm my action to loot the kobold corpse."
+        },
+        {
+            "system": "Executing skill 'press_key enter'."
+        },
+        {
+            "system": "Pressing key 'enter'."
+        },
+        {
+            "system": "Never mind."
+        },
+        {
+            "system": "Skill 'press_key enter' completed"
+        },
+        {
+            "ai": "I'll try to pick up any items from the kobold corpse."
+        },
+        {
+            "system": "Executing skill 'pickup 27 10'."
+        },
+        {
+            "system": "g - a kobold corpse."
+        },
+        {
+            "system": "Skill 'pickup 27 10' completed"
+        },
+        {
+            "ai": "I've picked up the kobold corpse. Now, I need to decide my next move."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The goblin throws an orcish dagger!  You are hit by an orcish dagger.\nA goblin appeared at (31,10).\nA dart appeared at (30,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A goblin appeared at (31,10).'."
+        },
+        {
+            "ai": "I need to attack the goblin before it can throw more daggers at me."
+        },
+        {
+            "system": "Executing skill 'melee_attack 31 10'."
+        },
+        {
+            "system": "You see here a dart.  The goblin hits!\nA orcish dagger appeared at (29,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A orcish dagger appeared at (29,10).'."
+        }
+    ]
+}

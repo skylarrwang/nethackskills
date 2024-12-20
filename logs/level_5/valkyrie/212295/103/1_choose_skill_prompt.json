@@ -1,0 +1,126 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (66, 7).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'There is a large box here, loot it? [ynq] (q)'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 7 which contains:\n- vertical closed door at (55,7) reachable in 11 steps\n- large box at (66,7) reachable in 0 steps\n- vertical open door at (55,10) reachable in 11 steps\n\ncorridor 2 reachable in 28 steps contains:\n- vertical open door at (39,3) reachable in 27 steps\n\nroom 3 reachable in 21 steps contains:\n- vertical open door at (39,3) reachable in 27 steps\n- orc corpse at (42,7) reachable in 24 steps\n- gold piece at (45,8) reachable in 21 steps\n- horizontal open door at (40,9) reachable in 27 steps\n\ncorridor 1 reachable in 51 steps contains:\nNo objects or features\n\nroom 0 reachable in 45 steps contains:\n- stairs up at (18,6) reachable in 48 steps\n- gold piece at (21,8) reachable in 46 steps\n\ncorridor 6 reachable in 12 steps contains:\n- vertical open door at (55,10) reachable in 11 steps\n\ncorridor 4 reachable in 22 steps contains:\n- horizontal open door at (40,9) reachable in 27 steps\n\nroom 5 reachable in 19 steps contains:\nNo objects or features\n\nClose Monsters:\n- tame little dog at (58,7) 8 steps west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 1 can be further explored.\nroom 0 can be further explored.\nvertical closed door at (55, 7) blocks progress in room 7.\n\nInventory:\n$: a gold piece\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: an uncursed oil lamp\nf: 2 food rations\n\nStats:\nHP: 15 / 16\narmor class: 6\nstrength: 21\ndexterity: 16\nconstitution: 11\nintelligence: 8\nwisdom: 12\ncharisma: 7\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 1\nlevel: 1\nexp: 5\nscore: 21\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I found a large box at (66,7) and have the option to loot it. My little dog is nearby and has eaten a newt corpse. I have just defeated a newt and a lichen, gaining some experience. My health is still good, and I have not encountered any immediate threats.\",\n        \"reasoning\": \"I should loot the large box to see if it contains anything useful. After that, I can continue exploring the area or look for more monsters to fight for experience.\",\n        \"speak\": \"I'm going to loot the large box to see what I can find.\"\n    },\n    \"skill\": {\n        \"name\": \"loot\",\n        \"x\": 66,\n        \"y\": 7\n    }\n}",
+    "context": [
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "Found a new corridor with ID 4"
+        },
+        {
+            "system": "Found a new room with ID 5"
+        },
+        {
+            "system": "Found a new corridor with ID 6"
+        },
+        {
+            "system": "A gold piece appeared at (46,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A gold piece appeared at (46,8).'."
+        },
+        {
+            "ai": "I will pick up the gold piece and then continue exploring for more monsters."
+        },
+        {
+            "system": "Executing skill 'pickup 46 8'."
+        },
+        {
+            "system": "Moving to (46,8)"
+        },
+        {
+            "system": "There is a doorway here.  You see here a gold piece."
+        },
+        {
+            "system": "$ - a gold piece."
+        },
+        {
+            "system": "Skill 'pickup 46 8' completed"
+        },
+        {
+            "ai": "I will keep exploring to find more monsters to fight."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "The door opens.\nFound a new room with ID 7\nA newt appeared at (56,10).\nA large box appeared at (66,7)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A newt appeared at (56,10).'."
+        },
+        {
+            "ai": "I see a newt nearby. Time to engage it for some experience!"
+        },
+        {
+            "system": "Executing skill 'melee_attack 56 10'."
+        },
+        {
+            "system": "The newt bites!\nA lichen appeared at (56,9)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A lichen appeared at (56,9).'."
+        },
+        {
+            "ai": "I need to finish off this newt to gain some experience."
+        },
+        {
+            "system": "Executing skill 'melee_attack 56 10'."
+        },
+        {
+            "system": "The newt bites!"
+        },
+        {
+            "system": "You kill the newt!\nA newt corpse appeared at (56,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A newt corpse appeared at (56,10).'."
+        },
+        {
+            "ai": "I need to take care of that lichen before it can attack me."
+        },
+        {
+            "system": "Executing skill 'melee_attack 56 9'."
+        },
+        {
+            "system": "You kill the newt!"
+        },
+        {
+            "system": "You kill the lichen!\nA lichen corpse appeared at (56,9)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A lichen corpse appeared at (56,9).'."
+        },
+        {
+            "ai": "I just defeated a newt and a lichen. Now, I'm going to check out that large box."
+        },
+        {
+            "system": "Executing skill 'loot 66 7'."
+        },
+        {
+            "system": "Moving to (66,7)"
+        },
+        {
+            "system": "You see here a newt corpse."
+        },
+        {
+            "system": "The little dog eats a newt corpse."
+        },
+        {
+            "system": "You see here a large box.  The little dog picks up a lichen corpse."
+        },
+        {
+            "system": "There is a large box here, loot it? [ynq] (q)"
+        },
+        {
+            "system": "Skill 'loot 66 7' completed"
+        }
+    ]
+}

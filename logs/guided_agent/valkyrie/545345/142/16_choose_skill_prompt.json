@@ -1,0 +1,102 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (16, 11).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message ''.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 9 which contains:\n- fountain at (16,11) reachable in 0 steps\n- stairs down at (15,13) reachable in 2 steps\n\ncorridor 1 reachable in 24 steps contains:\n- vertical open door at (39,4) reachable in 25 steps\n- fox corpse at (40,5) reachable in 24 steps\n\nroom 3 reachable in 39 steps contains:\n- lichen statue at (62,4) reachable in 46 steps\n\nroom 4 reachable in 22 steps contains:\n- vertical open door at (39,4) reachable in 25 steps\n- fountain at (36,5) reachable in 23 steps\n\ncorridor 5 reachable in 3 steps contains:\n- kobold corpse at (30,9) reachable in 14 steps\n- horizontal open door at (24,13) reachable in 9 steps\n\nroom 8 reachable in 10 steps contains:\n- horizontal open door at (24,13) reachable in 9 steps\n- gold piece at (24,15) reachable in 11 steps\n\ncorridor 2 currently unreachable contains:\nNo objects or features\n\nroom 0 reachable in 51 steps contains:\n- stairs up at (62,16) reachable in 54 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 1 can be further explored.\ncorridor 5 can be further explored.\nroom 9 can be further explored.\nroom 8 can be further explored.\nboulder at (57, 15) blocks progress in corridor 2.\n\nInventory:\n$: 3 gold pieces\na: a rusty +1 long sword\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield\nd: an uncursed food ration\ne: an uncursed oil lamp\nf: a fox corpse\ng: a fizzy potion\nh: a cursed two-handed sword (weapon in hands)\n\nStats:\nHP: 13 / 16\narmor class: 10\nstrength: 20\ndexterity: 10\nconstitution: 18\nintelligence: 9\nwisdom: 9\ncharisma: 11\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 3\nlevel: 1\nexp: 7\nscore: 31\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Neutral\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have reached the fountain at (16, 11) but haven't interacted with it yet. I need to decide whether to drink from it or explore further.\",\n        \"reasoning\": \"Drinking from the fountain could provide beneficial effects, but it might also have negative consequences. Since I'm at full health, I should be cautious. I could also explore the nearby areas for more items or monsters.\",\n        \"speak\": \"I'm at the fountain now. Should I drink from it or explore more?\"\n    },\n    \"skill\": {\n        \"name\": \"drink\",\n        \"item_letter\": \"g\"\n    }\n}",
+    "context": [
+        {
+            "system": "Interrupting skill to rethink because 'A two-handed sword appeared at (16,12).'."
+        },
+        {
+            "ai": "I found a two-handed sword! I should pick it up before deciding what to do next."
+        },
+        {
+            "system": "Executing skill 'pickup 16 12'."
+        },
+        {
+            "system": "Moving to (16,12)"
+        },
+        {
+            "system": "You see here a two-handed sword."
+        },
+        {
+            "system": "h - a two-handed sword."
+        },
+        {
+            "system": "Skill 'pickup 16 12' completed"
+        },
+        {
+            "ai": "I've got a new two-handed sword! Time to equip it and decide whether to check the fountain or head down."
+        },
+        {
+            "system": "Executing skill 'wield h'."
+        },
+        {
+            "system": "What do you want to wield? [- abh or ?*]"
+        },
+        {
+            "system": "Pressing key 'h'."
+        },
+        {
+            "system": "You cannot wield a two-handed sword while wearing a shield."
+        },
+        {
+            "system": "Skill 'wield h' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'."
+        },
+        {
+            "ai": "I need to take off my shield to wield the two-handed sword."
+        },
+        {
+            "system": "Executing skill 'takeoff c'."
+        },
+        {
+            "system": "You were wearing an uncursed +3 small shield."
+        },
+        {
+            "system": "Skill 'takeoff c' completed"
+        },
+        {
+            "ai": "I'm going to equip the two-handed sword now."
+        },
+        {
+            "system": "Executing skill 'wield h'."
+        },
+        {
+            "system": "What do you want to wield? [- abh or ?*]"
+        },
+        {
+            "system": "Pressing key 'h'."
+        },
+        {
+            "system": "The two-handed sword welds itself to your hands!"
+        },
+        {
+            "system": "Skill 'wield h' completed"
+        },
+        {
+            "ai": "Let's check out the fountain and see if it can help us."
+        },
+        {
+            "system": "Executing skill 'move_to 16 11'."
+        },
+        {
+            "system": "Skill 'move_to 16 11' completed: Reached position (16, 11)."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'."
+        }
+    ]
+}

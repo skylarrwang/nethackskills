@@ -1,0 +1,123 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (35, 5).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'There is a chest here, loot it? [ynq] (q)'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- stairs up at (39,3) reachable in 4 steps\n- vertical closed door at (34,4) reachable in 1 steps\n- chest at (35,5) reachable in 0 steps\n- horizontal closed door at (38,6) reachable in 3 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nvertical closed door at (34, 4) blocks progress in room 0.\nhorizontal closed door at (38, 6) blocks progress in room 0.\n\nInventory:\na: a +1 long sword (weapon in hand)\nb: a blessed +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 15\ndexterity: 15\nconstitution: 18\nintelligence: 8\nwisdom: 10\ncharisma: 9\nenergy: 1 / 1\ndepth: 2\ndungeon number: 0\ngold: 0\nlevel: 1\nexp: 4\nscore: 66\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\nHere is general advice: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I found a chest at my current location (35, 5) but I need to confirm if I want to loot it. There are no nearby monsters, and I am in a safe area. This could be a good opportunity to gather useful items for my stash.\",\n        \"reasoning\": \"Since I am looking to create a stash, looting the chest could provide me with useful items. I should confirm my choice to loot the chest.\",\n        \"speak\": \"I should loot the chest to see what useful items I can add to my stash.\"\n    },\n    \"skill\": {\n        \"name\": \"press_key\",\n        \"key\": \"y\"\n    }\n}",
+    "context": [
+        {
+            "ai": "I need to explore more and find a good spot for my stash."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "You swap places with your kitten."
+        },
+        {
+            "system": "Found a new room with ID 4"
+        },
+        {
+            "system": "A fountain appeared at (25,15)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A fountain appeared at (25,15).'."
+        },
+        {
+            "ai": "Let's check out the room with the fountain and see if it's a good place for my stash."
+        },
+        {
+            "system": "Executing skill 'go_to 4'."
+        },
+        {
+            "system": "Skill 'go_to 4' completed: Reached the room with id 4"
+        },
+        {
+            "ai": "Let's explore this room further and see if we can find a good spot for our stash."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The kitten drops a slime mold.\nA slime mold appeared at (44,16)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A slime mold appeared at (44,16).'."
+        },
+        {
+            "ai": "Let's explore this room a bit more to see if we can find a better stash location."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 5"
+        },
+        {
+            "system": "Found a new room with ID 6\nA chest appeared at (8,17).\nA gold piece appeared at (11,17)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A chest appeared at (8,17).'."
+        },
+        {
+            "ai": "I need to explore corridor 5 to see what I can find."
+        },
+        {
+            "system": "Executing skill 'go_to 5'."
+        },
+        {
+            "system": "Skill 'go_to 5' completed: Reached the corridor with id 5"
+        },
+        {
+            "ai": "I need to explore corridor 2 to find a better stash location."
+        },
+        {
+            "system": "Executing skill 'go_to 2'."
+        },
+        {
+            "system": "You stop.  Your kitten is in the way!"
+        },
+        {
+            "system": "You see here a slime mold."
+        },
+        {
+            "system": "Skill 'go_to 2' completed: Reached the room with id 2"
+        },
+        {
+            "ai": "Let's check out the stairs down and see where it leads."
+        },
+        {
+            "system": "Executing skill 'down 41 18'."
+        },
+        {
+            "system": "Moving to (41,18)"
+        },
+        {
+            "system": "You descend the stairs.--More--"
+        },
+        {
+            "system": "Changed dungeon level from (0, 1) to (0, 2)\nFound a new room with ID 0"
+        },
+        {
+            "system": "Skill 'down 41 18' completed"
+        },
+        {
+            "ai": "Let's check out the chest and see what we can find!"
+        },
+        {
+            "system": "Executing skill 'loot 35 5'."
+        },
+        {
+            "system": "Moving to (35,5)"
+        },
+        {
+            "system": "You see here a chest."
+        },
+        {
+            "system": "There is a chest here, loot it? [ynq] (q)"
+        },
+        {
+            "system": "Skill 'loot 35 5' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        }
+    ]
+}

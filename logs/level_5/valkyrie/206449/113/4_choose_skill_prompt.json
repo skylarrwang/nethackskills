@@ -1,0 +1,105 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (9, 13).\n        avoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\n        Game message 'Pick up what?\nComestibles\na - 2 food rations\nScrolls\nb - a scroll labeled VENZAR BORGAVVE\n(end)'.\n        You haven't prayed yet.\n\nRooms:\nYou are in corridor 3 which contains:\n- horizontal open door at (12,7) reachable in 7 steps\n- food ration at (9,13) reachable in 0 steps\n\nroom 0 reachable in 8 steps contains:\n- vertical open door at (15,4) reachable in 11 steps\n- stairs up at (12,6) reachable in 8 steps\n- vertical open door at (15,6) reachable in 11 steps\n- horizontal open door at (12,7) reachable in 7 steps\n\ncorridor 1 reachable in 12 steps contains:\n- vertical open door at (15,4) reachable in 11 steps\n- vertical open door at (24,5) reachable in 20 steps\n- vertical open door at (15,6) reachable in 11 steps\n\nroom 2 reachable in 21 steps contains:\n- vertical open door at (24,5) reachable in 20 steps\n\nClose Monsters:\n- tame little dog at (8,13) 1 steps west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 3 can be further explored.\n\nInventory:\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: a silver wand\n\nStats:\nHP: 16 / 16\narmor class: 6\nstrength: 19\ndexterity: 11\nconstitution: 16\nintelligence: 13\nwisdom: 7\ncharisma: 10\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 0\nlevel: 1\nexp: 0\nscore: 0\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I found two food rations and a scroll labeled 'VENZAR BORGAVVE' in the current room. I successfully picked up one food ration, but I need to decide whether to pick up the second food ration or the scroll. My health is full, and there are no nearby monsters, so I have some time to think.\",\n        \"reasoning\": \"Since I already have one food ration, I should consider picking up the scroll as it might provide useful information or abilities later. After that, I can continue exploring the corridor for more opportunities to gain experience.\",\n        \"speak\": \"I found some useful items. I should pick up the scroll and then keep exploring.\"\n    },\n    \"skill\": {\n        \"name\": \"pickup\",\n        \"item\": \"b\"\n    }\n}",
+    "context": [
+        {
+            "ai": "I need to explore the level to find more opportunities for combat and experience."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "Found a new corridor with ID 1"
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "The door opens.\nFound a new room with ID 2\nA silver wand appeared at (37,5)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A silver wand appeared at (37,5).'."
+        },
+        {
+            "ai": "I'm going to grab the silver wand and keep exploring for more opportunities to gain experience."
+        },
+        {
+            "system": "Executing skill 'pickup 37 5'."
+        },
+        {
+            "system": "Moving to (37,5)"
+        },
+        {
+            "system": "You swap places with your little dog.  You see here a silver wand."
+        },
+        {
+            "system": "e - a silver wand."
+        },
+        {
+            "system": "Skill 'pickup 37 5' completed"
+        },
+        {
+            "ai": "Let's keep moving and find some monsters to fight for experience."
+        },
+        {
+            "system": "Executing skill 'go_to 1'."
+        },
+        {
+            "system": "Skill 'go_to 1' completed: Reached the corridor with id 1"
+        },
+        {
+            "ai": "Let's keep exploring this corridor to find some monsters to gain experience."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "You hear a door open."
+        },
+        {
+            "system": "You find a hidden door."
+        },
+        {
+            "system": "The door resists!"
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "Found a new corridor with ID 3"
+        },
+        {
+            "system": "A food ration appeared at (9,13)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A food ration appeared at (9,13).'."
+        },
+        {
+            "ai": "I'm going to grab the food ration and then keep exploring for monsters."
+        },
+        {
+            "system": "Executing skill 'pickup 9 13'."
+        },
+        {
+            "system": "Moving to (9,13)"
+        },
+        {
+            "system": "Things that are here:\n2 food rations\na scroll labeled VENZAR BORGAVVE\n--More--"
+        },
+        {
+            "system": "Pick up what?\nComestibles\na - 2 food rations\nScrolls\nb - a scroll labeled VENZAR BORGAVVE\n(end)"
+        },
+        {
+            "system": "Skill 'pickup 9 13' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'pickup' does not exist.'."
+        }
+    ]
+}

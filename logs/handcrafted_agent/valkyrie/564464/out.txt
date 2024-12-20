@@ -1,0 +1,816 @@
+Using handcrafted agent.
+Ignoring task due to using the handcrafted agent.
+Logging in '/Users/srwang/Documents/pathways_fall/logs/handcrafted_agent/valkyrie/564464'.
+Initializing video writer with resolution 1920x1080: /Users/srwang/Documents/pathways_fall/logs/handcrafted_agent/valkyrie/564464/video.mp4
+Agent is playing as a valkyrie.
+Thinking: Fighting nearby monsters
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'fight'.
+Executed action 'southwest'.
+Thinking: Killed the target.
+Thinking: Exploring level
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A gold piece appeared at (4,6).'.
+Thinking: Exploring level
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A newt appeared at (26,6).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'east'.
+Executed action 'fight'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A newt corpse appeared at (26,6).'.
+Thinking: Exploring level
+Thinking: Kicking open door at (17, 5)
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'kick'.
+Executed action 'north'.
+Thinking: Exploring level
+Thinking: Kicking open door at (17, 5)
+Executed action 'kick'.
+Executed action 'north'.
+Thinking: Interrupting skill to rethink because 'A worthless piece of violet glass appeared at (17,2).'.
+Thinking: Exploring level
+Executed action 'north'.
+Thinking: Interrupting skill to rethink because 'A newt statue appeared at (19,3).'.
+Thinking: Exploring level
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Thinking: Interrupting skill to rethink because 'A newt appeared at (15,6).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'north'.
+Executed action 'fight'.
+Executed action 'north'.
+Executed action 'fight'.
+Executed action 'north'.
+Thinking: Killed the target.
+Thinking: Exploring level
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'east'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A food ration appeared at (30,4).'.
+Thinking: Trying to pickup food ration at (30,4)
+Thinking: Moving to (30,4)
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'southeast'.
+Executed action 'pickup'.
+Thinking: Exploring level
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A stained spellbook appeared at (17,17).'.
+Thinking: Exploring level
+Executed action 'south'.
+Thinking: Interrupting skill to rethink because 'A tripe ration appeared at (17,16).'.
+Thinking: Trying to pickup tripe ration at (17,16)
+Thinking: Moving to (17,16)
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'pickup'.
+Thinking: Exploring level
+Executed action 'west'.
+Thinking: Cannot handle the popup.
+Executed action 'space'. Thoughts: Pressing space to advance.
+Thinking: Exploring level
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northeast'.
+Executed action 'northeast'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'southwest'.
+Thinking: Interrupting skill to rethink because 'A cyan potion appeared at (3,18).'.
+Thinking: Trying to pickup cyan potion at (3,18)
+Thinking: Moving to (3,18)
+Executed action 'west'.
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A stairs down appeared at (5,18).'.
+Thinking: Exploring level
+Executed action 'southwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'north'.
+Executed action 'north'.
+Thinking: Cannot handle the popup.
+Executed action 'space'. Thoughts: Pressing space to advance.
+Thinking: Exploring level
+Executed action 'northeast'.
+Executed action 'northeast'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Thinking: Interrupting skill to rethink because 'A stained spellbook appeared at (17,6).'.
+Thinking: Exploring level
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'south'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'southeast'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A newt appeared at (48,15).'.
+Thinking: Fighting nearby monsters
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A newt appeared at (48,15).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'east'.
+Thinking: Killed the target.
+Executed action 'fight'.
+Executed action 'northeast'.
+Executed action 'fight'.
+Executed action 'northeast'.
+Executed action 'fight'.
+Executed action 'northeast'.
+Thinking: Interrupting skill to rethink because 'A newt corpse appeared at (48,14).'.
+Thinking: Exploring level
+Executed action 'east'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northeast'.
+Thinking: Interrupting skill to rethink because 'A tin opener appeared at (59,4).'.
+Thinking: Exploring level
+Executed action 'southwest'.
+Executed action 'south'.
+Thinking: Cannot handle the popup.
+Executed action 'space'. Thoughts: Pressing space to advance.
+Thinking: Exploring level
+Executed action 'north'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northeast'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A gold piece appeared at (4,6).'.
+Thinking: Exploring level
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'southeast'.
+Executed action 'southeast'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'south'.
+Executed action 'south'.
+Thinking: Interrupting skill to rethink because 'A lucern hammer appeared at (75,15).'.
+Thinking: Exploring level
+Executed action 'south'.
+Executed action 'west'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'east'.
+Executed action 'southeast'.
+Executed action 'southeast'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'northeast'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'northeast'.
+Executed action 'northeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'southeast'.
+Executed action 'southeast'.
+Executed action 'southeast'.
+Executed action 'south'.
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A lichen appeared at (73,7).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'southwest'.
+Thinking: Interrupting skill to rethink because 'A lichen corpse appeared at (73,7).'.
+Thinking: Moving to the next level using the staircase at (5,18).
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'south'.
+Thinking: Interrupting skill to rethink because 'A grid bug appeared at (62,15).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'southwest'.
+Thinking: Killed the target.
+Thinking: Moving to the next level using the staircase at (5,18).
+Executed action 'south'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A fox appeared at (62,15).'.
+Thinking: Moving to the next level using the staircase at (5,18).
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Thinking: Reached position (5, 18).
+Executed action 'down'.
+Executed action 'space'. Thoughts: Pressing space to advance.
+Thinking: Interrupting skill to rethink because 'Changed dungeon level from (0, 1) to (0, 2)'.
+Thinking: Fighting nearby monsters
+Executed action 'southwest'.
+Executed action 'fight'.
+Executed action 'south'.
+Thinking: Interrupting skill to rethink because 'A lichen corpse appeared at (56,8).'.
+Thinking: Exploring level
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A grid bug appeared at (70,17).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'east'.
+Thinking: Killed the target.
+Thinking: Exploring level
+Executed action 'east'.
+Executed action 'west'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'northwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'east'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Executed action 'north'.
+Thinking: Interrupting skill to rethink because 'A kobold appeared at (42,5).'.
+Thinking: Fighting nearby monsters
+Executed action 'east'.
+Thinking: Interrupting skill to rethink because 'A grid bug statue appeared at (40,5).'.
+Thinking: Fighting nearby monsters
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'fight'.
+Executed action 'southeast'.
+Thinking: Interrupting skill to rethink because 'A kobold corpse appeared at (42,5).'.
+Thinking: Exploring level
+Executed action 'north'.
+Executed action 'northwest'.
+Executed action 'north'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Thinking: Interrupting skill to rethink because 'A newt appeared at (40,4).'.
+Thinking: Fighting nearby monsters
+Executed action 'south'.
+Executed action 'fight'.
+Executed action 'south'.
+Executed action 'fight'.
+Executed action 'south'.
+Thinking: Killed the target.
+Thinking: Exploring level
+Executed action 'north'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'south'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'east'.
+Executed action 'southeast'.
+Executed action 'east'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'search'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'east'.
+Executed action 'south'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A dart appeared at (49,8).'.
+Executed action 'space'. Thoughts: Pressing space to advance.
+Thinking: Interrupting skill to rethink because 'A giant rat appeared at (49,8).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A giant rat corpse appeared at (49,8).'.
+Thinking: Exploring level
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A kobold appeared at (48,8).'.
+Thinking: Fighting nearby monsters
+Executed action 'fight'.
+Executed action 'west'.
+Thinking: Interrupting skill to rethink because 'A dart appeared at (50,8).'.
+Thinking: Exploring level
+Executed action 'west'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'southwest'.
+Executed action 'west'.
+Executed action 'southwest'.
+Executed action 'south'.
+Thinking: Interrupting skill to rethink because 'A red mold appeared at (45,15).'.
+Thinking: Fighting nearby monsters
+Executed action 'south'.
+Executed action 'southeast'.
+Executed action 'fight'.
+Executed action 'southeast'.
+Executed action 'fight'.
+Executed action 'southeast'.
+Thinking: Cannot handle the popup.
+Executed action 'space'. Thoughts: Pressing space to advance.
+Agent is done.

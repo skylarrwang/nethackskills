@@ -1,0 +1,132 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (37, 17).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'Drink from the fountain? [yn] (n)'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 7 which contains:\n- horizontal closed door at (34,15) reachable in 3 steps\n- stairs down at (31,16) reachable in 6 steps\n- fountain at (37,17) reachable in 0 steps\n\nroom 2 currently unreachable contains:\n- vertical open door at (43,5) reachable in 17 steps\n\ncorridor 6 reachable in 3 steps contains:\n- vertical open door at (51,5) reachable in 22 steps\n- vertical open door at (65,10) reachable in 28 steps\n- jackal corpse at (48,14) reachable in 11 steps\n- vertical closed door at (52,15) reachable in 15 steps\n\nroom 3 reachable in 23 steps contains:\n- vertical open door at (51,5) reachable in 22 steps\n\nroom 5 reachable in 29 steps contains:\n- fountain at (67,6) reachable in 30 steps\n- jackal corpse at (67,8) reachable in 30 steps\n- jackal corpse at (66,9) reachable in 29 steps\n- vertical open door at (65,10) reachable in 28 steps\n\nroom 0 reachable in 12 steps contains:\n- jackal corpse at (48,14) reachable in 11 steps\n- dart trap at (50,14) reachable in 13 steps\n- vertical closed door at (52,15) reachable in 15 steps\n- stairs up at (50,16) reachable in 13 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 7 can be further explored.\nhorizontal closed door at (34, 15) blocks progress in room 7.\n\nInventory:\n$: 4 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: 8 darts\nf: 2 eggs\ng: a fortune cookie\nh: a white spellbook\ni: an egg\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 19\ndexterity: 14\nconstitution: 15\nintelligence: 9\nwisdom: 7\ncharisma: 10\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 4\nlevel: 1\nexp: 10\nscore: 44\nencumbrance: unencumbered\nhunger: satiated\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I reached the fountain but haven't yet decided whether to drink from it. The game is prompting me to confirm my choice to drink.\",\n        \"reasoning\": \"Drinking from the fountain could have beneficial or detrimental effects. I should weigh the risks and benefits before proceeding. Since I have full health, it might be wise to wait until I need healing or to explore more first.\",\n        \"speak\": \"I'm considering whether to drink from the fountain or explore further first.\"\n    },\n    \"skill\": {\n        \"name\": \"press_key\",\n        \"key\": \"n\"\n    }\n}",
+    "context": [
+        {
+            "system": "You hear water falling on coins."
+        },
+        {
+            "system": "A newt appeared at (51,5)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A newt appeared at (51,5).'."
+        },
+        {
+            "ai": "There's a newt nearby. I should take it on to gain some experience."
+        },
+        {
+            "system": "Executing skill 'melee_attack 51 5'."
+        },
+        {
+            "system": "You miss the newt.  The newt misses!"
+        },
+        {
+            "system": "You miss the newt.  The newt misses!"
+        },
+        {
+            "system": "You kill the newt!"
+        },
+        {
+            "system": "Skill 'melee_attack 51 5' completed: Killed the target."
+        },
+        {
+            "ai": "Let's explore corridor 1 and see if we can find more monsters to fight."
+        },
+        {
+            "system": "Executing skill 'go_to 1'."
+        },
+        {
+            "system": "Skill 'go_to 1' completed: Reached the corridor with id 1"
+        },
+        {
+            "ai": "I will explore corridor 4 to see if I can find more monsters to fight."
+        },
+        {
+            "system": "Executing skill 'go_to 4'."
+        },
+        {
+            "system": "A grid bug appeared at (62,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A grid bug appeared at (62,8).'."
+        },
+        {
+            "ai": "There's a grid bug nearby. Time to take it on!"
+        },
+        {
+            "system": "Executing skill 'melee_attack 62 8'."
+        },
+        {
+            "system": "You kill the grid bug!"
+        },
+        {
+            "system": "Skill 'melee_attack 62 8' completed: Killed the target."
+        },
+        {
+            "ai": "Let's keep exploring corridor 4 for more monsters."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The corridors [1,4] are actually the same. They have been merged into a single corridor with ID 6."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "You find a hidden door."
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "A grid bug appeared at (54,12)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A grid bug appeared at (54,12).'."
+        },
+        {
+            "ai": "Let's explore the level further to find more monsters and loot."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new room with ID 7\nA stairs down appeared at (31,16).\nA fountain appeared at (37,17)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A stairs down appeared at (31,16).'."
+        },
+        {
+            "ai": "Let's check out the fountain in the new room before deciding on our next move."
+        },
+        {
+            "system": "Executing skill 'move_to 37 17'."
+        },
+        {
+            "system": "Skill 'move_to 37 17' completed: Reached position (37, 17)."
+        },
+        {
+            "ai": "I'm going to drink from the fountain and see what happens."
+        },
+        {
+            "system": "Executing skill 'drink '."
+        },
+        {
+            "system": "Drink from the fountain? [yn] (n)"
+        },
+        {
+            "system": "Skill 'drink ' completed"
+        }
+    ]
+}

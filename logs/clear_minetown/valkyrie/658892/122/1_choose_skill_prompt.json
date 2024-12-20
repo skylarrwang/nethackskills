@@ -1,0 +1,117 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (31, 7).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'It's a wall.'.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 3 which contains:\n- vertical open door at (31,7) reachable in 0 steps\n\nroom 4 currently unreachable contains:\n- gold piece at (44,4) currently unreachable\n- vertical open door at (53,4) currently unreachable\n- stairs down at (44,6) currently unreachable\n\ncorridor 1 reachable in 7 steps contains:\n- vertical open door at (25,6) reachable in 6 steps\n- kobold corpse at (27,10) reachable in 13 steps\n\nroom 2 reachable in 1 steps contains:\n- vertical open door at (25,6) reachable in 6 steps\n- lichen corpse at (27,6) reachable in 4 steps\n- vertical open door at (31,7) reachable in 0 steps\n\nroom 0 reachable in 17 steps contains:\n- stairs up at (25,15) reachable in 17 steps\n- vertical open door at (13,16) reachable in 29 steps\n- scroll labeled FNORD at (22,16) reachable in 20 steps\n- fountain at (24,16) reachable in 18 steps\n\nClose Monsters:\n- tame kitten at (29,7) 2 steps west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 4 can be further explored.\ncorridor 3 can be further explored.\ncorridor 1 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 14 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: 2 uncursed food rations\ne: a scroll labeled ABRA KA DABRA\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 19\ndexterity: 12\nconstitution: 19\nintelligence: 9\nwisdom: 8\ncharisma: 8\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 14\nlevel: 1\nexp: 7\nscore: 42\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\nHere is general advice: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I am currently in corridor 3, adjacent to an open door at (31, 7). I have encountered a wall at (25, 5) and (25, 7), blocking my path. I need to explore further to find a way to the gold piece and stairs down, which are currently unreachable.\",\n        \"reasoning\": \"Since I am near an open door, I should enter it to see if it leads to a new area that might provide access to the gold piece and stairs down. I will move into the open door at (31, 7).\",\n        \"speak\": \"I will check the open door to see where it leads.\"\n    },\n    \"skill\": {\n        \"name\": \"move_to\",\n        \"x\": 31,\n        \"y\": 7\n    }\n}",
+    "context": [
+        {
+            "system": "Executing skill 'move_to 25 7'."
+        },
+        {
+            "system": "It's a wall."
+        },
+        {
+            "system": "Skill 'move_to 25 7' completed: Tile (25, 7) is blocked, stopping adjacent to it."
+        },
+        {
+            "ai": "I need to explore the nearby corridor to find a way to the gold piece and stairs down."
+        },
+        {
+            "system": "Executing skill 'go_to 3'."
+        },
+        {
+            "system": "You see here a lichen corpse."
+        },
+        {
+            "system": "Skill 'go_to 3' completed: Reached the corridor with id 3"
+        },
+        {
+            "ai": "I need to find another route to reach the gold piece and stairs down."
+        },
+        {
+            "system": "Executing skill 'go_to 1'."
+        },
+        {
+            "system": "Skill 'go_to 1' completed: Reached the corridor with id 1"
+        },
+        {
+            "ai": "Let's see where this open door leads and if it can help me find the gold piece and stairs down."
+        },
+        {
+            "system": "Executing skill 'move_to 25 6'."
+        },
+        {
+            "system": "Skill 'move_to 25 6' completed: Reached position (25, 6)."
+        },
+        {
+            "ai": "I will check the open door to see where it leads."
+        },
+        {
+            "system": "Executing skill 'move_to 25 5'."
+        },
+        {
+            "system": "It's a wall."
+        },
+        {
+            "system": "Skill 'move_to 25 5' completed: Tile (25, 5) is blocked, stopping adjacent to it."
+        },
+        {
+            "ai": "I need to explore corridor 3 to find a way to the gold piece and stairs down."
+        },
+        {
+            "system": "Executing skill 'go_to 3'."
+        },
+        {
+            "system": "You see here a lichen corpse."
+        },
+        {
+            "system": "You swap places with your kitten."
+        },
+        {
+            "system": "Skill 'go_to 3' completed: Reached the corridor with id 3"
+        },
+        {
+            "ai": "I need to explore corridor 1 to find a way to the gold piece and stairs down."
+        },
+        {
+            "system": "Executing skill 'go_to 1'."
+        },
+        {
+            "system": "Skill 'go_to 1' completed: Reached the corridor with id 1"
+        },
+        {
+            "ai": "I will check the open door to see where it leads."
+        },
+        {
+            "system": "Executing skill 'move_to 25 7'."
+        },
+        {
+            "system": "It's a wall."
+        },
+        {
+            "system": "Skill 'move_to 25 7' completed: Tile (25, 7) is blocked, stopping adjacent to it."
+        },
+        {
+            "ai": "I need to explore corridor 3 to find a way to the gold piece and stairs down."
+        },
+        {
+            "system": "Executing skill 'go_to 3'."
+        },
+        {
+            "system": "You see here a lichen corpse."
+        },
+        {
+            "system": "Skill 'go_to 3' completed: Reached the corridor with id 3"
+        },
+        {
+            "ai": "I will check the open door to see where it leads."
+        },
+        {
+            "system": "Executing skill 'move_to 31 6'."
+        },
+        {
+            "system": "It's a wall."
+        },
+        {
+            "system": "Skill 'move_to 31 6' completed: Tile (31, 6) is blocked, stopping adjacent to it."
+        }
+    ]
+}

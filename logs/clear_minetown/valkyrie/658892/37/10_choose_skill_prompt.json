@@ -1,0 +1,114 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (27, 10).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'Loot in what direction?'.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 1 which contains:\n- kobold corpse at (27,10) reachable in 0 steps\n\nroom 0 reachable in 6 steps contains:\n- stairs up at (25,15) reachable in 6 steps\n- vertical open door at (13,16) reachable in 18 steps\n- scroll labeled FNORD at (22,16) reachable in 9 steps\n- fountain at (24,16) reachable in 7 steps\n\nClose Monsters:\n- tame kitten at (26,11) 1 steps south-west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 1 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 7 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: 2 uncursed food rations\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 19\ndexterity: 12\nconstitution: 19\nintelligence: 9\nwisdom: 8\ncharisma: 8\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 7\nlevel: 1\nexp: 1\nscore: 11\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\nHere is general advice: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I defeated the kobold zombie and found its corpse, but I couldn't loot it due to an error. I need to check for any items on the corpse.\",\n        \"reasoning\": \"Since I can't loot directly, I should try to interact with the corpse to see if there's anything useful. After that, I can explore the corridor further or return to the previous areas.\",\n        \"speak\": \"I need to check the kobold corpse for any items.\"\n    },\n    \"skill\": {\n        \"name\": \"press_key\",\n        \"key\": \"l\"\n    }\n}",
+    "context": [
+        {
+            "system": "Executing skill 'move_to 13 16'."
+        },
+        {
+            "system": "The door opens.  The kitten drops a scroll labeled FNORD."
+        },
+        {
+            "system": "Skill 'move_to 13 16' completed: Tile (13, 16) is blocked, stopping adjacent to it."
+        },
+        {
+            "ai": "The door is blocked, so I need to explore other areas or return to the stairs."
+        },
+        {
+            "system": "Executing skill 'move_to 24 16'."
+        },
+        {
+            "system": "You swap places with your kitten.--More--"
+        },
+        {
+            "system": "You see here a scroll labeled FNORD."
+        },
+        {
+            "system": "You stop.  Your kitten is in the way!"
+        },
+        {
+            "system": "The kitten picks up a scroll labeled FNORD."
+        },
+        {
+            "system": "The kitten drops a scroll labeled FNORD."
+        },
+        {
+            "system": "Skill 'move_to 24 16' completed: Reached position (24, 16)."
+        },
+        {
+            "ai": "I should read the scroll labeled FNORD to see what it does."
+        },
+        {
+            "system": "Executing skill 'read a'."
+        },
+        {
+            "system": "What do you want to read? [*]"
+        },
+        {
+            "system": "Pressing key 'a'."
+        },
+        {
+            "system": "That is a silly thing to read."
+        },
+        {
+            "system": "Skill 'read a' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'look' does not have a parameter 'x'.'."
+        },
+        {
+            "ai": "I need to explore more or check the fountain for any potential benefits."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 1"
+        },
+        {
+            "system": "A kobold zombie appeared at (27,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A kobold zombie appeared at (27,10).'."
+        },
+        {
+            "ai": "I need to take care of that kobold zombie before I can proceed."
+        },
+        {
+            "system": "Executing skill 'melee_attack 27 10'."
+        },
+        {
+            "system": "You destroy the kobold zombie!\nA kobold corpse appeared at (27,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A kobold corpse appeared at (27,10).'."
+        },
+        {
+            "ai": "Let's check the kobold corpse for any items before moving on."
+        },
+        {
+            "system": "Executing skill 'loot 27 10'."
+        },
+        {
+            "system": "Moving to (27,10)"
+        },
+        {
+            "system": "You see here a kobold corpse."
+        },
+        {
+            "system": "Loot in what direction?"
+        },
+        {
+            "system": "Skill 'loot 27 10' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'move_to' does not exist.'."
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'move_to' does not exist.'."
+        }
+    ]
+}

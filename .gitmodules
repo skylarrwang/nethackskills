@@ -1,0 +1,9 @@
+[submodule "NetPlay"]
+	path = NetPlay
+	url = https://github.com/skylarrwang/NetPlay.git
+[submodule "nle-language-wrapper"]
+	path = nle-language-wrapper
+	url = https://github.com/ngoodger/nle-language-wrapper.git
+[submodule "nle"]
+	path = nle
+	url = https://github.com/heiner/nle.git

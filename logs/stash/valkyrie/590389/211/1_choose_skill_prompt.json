@@ -1,0 +1,135 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (52, 9).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'h - a concave amulet.'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- gold piece at (50,8) reachable in 2 steps\n- lichen corpse at (53,8) reachable in 1 steps\n- concave amulet at (52,9) reachable in 0 steps\n- stairs up at (53,9) reachable in 1 steps\n- vertical open door at (65,9) reachable in 13 steps\n\ncorridor 1 reachable in 3 steps contains:\nNo objects or features\n\ncorridor 5 reachable in 10 steps contains:\nNo objects or features\n\ncorridor 4 reachable in 3 steps contains:\n- boulder at (35,8) reachable in 17 steps\n- gold piece at (50,8) reachable in 2 steps\n- boulder at (31,9) reachable in 21 steps\n\nroom 7 reachable in 22 steps contains:\n- vertical closed door at (73,8) reachable in 25 steps\n- vertical open door at (73,11) reachable in 21 steps\n- vertical open door at (73,13) reachable in 25 steps\n\ncorridor 6 reachable in 14 steps contains:\n- vertical open door at (65,9) reachable in 13 steps\n- vertical open door at (73,11) reachable in 21 steps\n\ncorridor 8 reachable in 26 steps contains:\n- boulder at (65,13) reachable in 33 steps\n- vertical open door at (73,13) reachable in 25 steps\n\nClose Monsters:\n- tame little dog at (53,8) 1 steps north-east\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 4 can be further explored.\nboulder at (31, 9) blocks progress in corridor 4.\nvertical closed door at (73, 8) blocks progress in room 7.\nboulder at (65, 13) blocks progress in corridor 8.\n\nInventory:\n$: a gold piece\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: a food ration\nf: a scroll labeled VENZAR BORGAVVE\ng: a splint mail\nh: a concave amulet\n\nStats:\nHP: 14 / 16\narmor class: 6\nstrength: 22\ndexterity: 10\nconstitution: 17\nintelligence: 7\nwisdom: 8\ncharisma: 11\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 1\nlevel: 1\nexp: 2\nscore: 9\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\nHere is general advice: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have successfully picked up the concave amulet and killed the jackal. I'm currently at the stairs, which is a safe location to stash my items. I need to drop off the splint mail and the amulet to lighten my load.\",\n        \"reasoning\": \"I will drop the splint mail and the concave amulet at the stairs to create a stash. This will help me manage my inventory better and prepare for further exploration.\",\n        \"speak\": \"I need to drop off some items at the stairs to lighten my load.\"\n    },\n    \"skill\": {\n        \"name\": \"drop\",\n        \"item_letter\": \"g\"\n    }\n}",
+    "context": [
+        {
+            "system": "Executing skill 'press_key n'."
+        },
+        {
+            "system": "Pressing key 'n'."
+        },
+        {
+            "system": "Beware, there will be no return!  Still climb? [yn] (n)"
+        },
+        {
+            "system": "Skill 'press_key n' completed"
+        },
+        {
+            "ai": "I need to explore more before deciding to climb up. Let's check out the nearby areas for useful items."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 5"
+        },
+        {
+            "system": "You see here a splint mail."
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "Found a new corridor with ID 6"
+        },
+        {
+            "system": "The door opens.\nFound a new room with ID 7"
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "Found a new corridor with ID 8"
+        },
+        {
+            "system": "A boulder appeared at (65,13)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A boulder appeared at (65,13).'."
+        },
+        {
+            "ai": "I need to grab that splint mail and find a safe spot for my stash."
+        },
+        {
+            "system": "Executing skill 'move_to 64 9'."
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "You see here a splint mail."
+        },
+        {
+            "system": "Skill 'move_to 64 9' completed: Reached position (64, 9)."
+        },
+        {
+            "ai": "I'll grab the splint mail and then head to the staircase to set up my stash."
+        },
+        {
+            "system": "Executing skill 'pickup 64 9'."
+        },
+        {
+            "system": "g - a splint mail."
+        },
+        {
+            "system": "Skill 'pickup 64 9' completed"
+        },
+        {
+            "ai": "I'm going to head back to the staircase to create a stash for my items."
+        },
+        {
+            "system": "Executing skill 'move_to 53 9'."
+        },
+        {
+            "system": "A jackal appeared at (50,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A jackal appeared at (50,8).'."
+        },
+        {
+            "ai": "I need to get to the staircase quickly to stash my items and avoid the jackal."
+        },
+        {
+            "system": "Executing skill 'move_to 53 9'."
+        },
+        {
+            "system": "The jackal bites!"
+        },
+        {
+            "system": "Skill 'move_to 53 9' completed: Reached position (53, 9)."
+        },
+        {
+            "ai": "I need to take care of this jackal before I can stash my items."
+        },
+        {
+            "system": "Executing skill 'melee_attack 52 9'."
+        },
+        {
+            "system": "The jackal bites!"
+        },
+        {
+            "system": "You kill the jackal!\nA concave amulet appeared at (52,9)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A concave amulet appeared at (52,9).'."
+        },
+        {
+            "ai": "I need to grab that amulet and then stash my items at the stairs."
+        },
+        {
+            "system": "Executing skill 'pickup 52 9'."
+        },
+        {
+            "system": "Moving to (52,9)"
+        },
+        {
+            "system": "You see here a concave amulet."
+        },
+        {
+            "system": "h - a concave amulet."
+        },
+        {
+            "system": "Skill 'pickup 52 9' completed"
+        }
+    ]
+}

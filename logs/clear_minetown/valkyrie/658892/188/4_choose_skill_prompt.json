@@ -1,0 +1,117 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (27, 10).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'Loot in what direction?'.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 1 which contains:\n- vertical open door at (25,6) reachable in 7 steps\n- kobold corpse at (27,10) reachable in 0 steps\n- kobold corpse at (26,11) reachable in 1 steps\n\nroom 4 currently unreachable contains:\n- gold piece at (44,4) currently unreachable\n- vertical open door at (53,4) currently unreachable\n- stairs down at (44,6) currently unreachable\n\ncorridor 3 reachable in 14 steps contains:\n- vertical open door at (31,7) reachable in 13 steps\n\nroom 2 reachable in 8 steps contains:\n- vertical open door at (25,6) reachable in 7 steps\n- lichen corpse at (26,7) reachable in 9 steps\n- vertical open door at (31,7) reachable in 13 steps\n\nroom 0 reachable in 6 steps contains:\n- stairs up at (25,15) reachable in 6 steps\n- vertical open door at (13,16) reachable in 18 steps\n- scroll labeled FNORD at (22,16) reachable in 9 steps\n- fountain at (24,16) reachable in 7 steps\n\nClose Monsters:\n- tame kitten at (26,10) 1 steps west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 4 can be further explored.\ncorridor 3 can be further explored.\ncorridor 1 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 14 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: 2 uncursed food rations\ne: a scroll labeled ABRA KA DABRA\nf: 12 darts\n\nStats:\nHP: 16 / 18\narmor class: 6\nstrength: 19\ndexterity: 12\nconstitution: 19\nintelligence: 9\nwisdom: 8\ncharisma: 8\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 14\nlevel: 1\nexp: 19\nscore: 90\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\nHere is general advice: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I reached the kobold corpse at (27, 10) but encountered an issue when trying to loot it. The game prompted me for a direction to loot, which I need to specify.\",\n        \"reasoning\": \"I should loot the kobold corpse to see if it has any useful items. I will specify the direction to loot from my current position.\",\n        \"speak\": \"I need to loot the kobold corpse to check for any items.\"\n    },\n    \"skill\": {\n        \"name\": \"loot\",\n        \"direction\": \"down\"\n    }\n}",
+    "context": [
+        {
+            "system": "Executing skill 'melee_attack 27 7'."
+        },
+        {
+            "system": "The kitten misses the jackal.  The kitten misses the jackal.\nA jackal appeared at (28,8).\nA lichen corpse appeared at (26,7)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A jackal appeared at (28,8).'."
+        },
+        {
+            "ai": "I need to take out that jackal quickly before it can attack."
+        },
+        {
+            "system": "Executing skill 'melee_attack 27 7'."
+        },
+        {
+            "system": "You swap places with your kitten.  The jackal misses!"
+        },
+        {
+            "system": "You swap places with your kitten.  The jackal misses!"
+        },
+        {
+            "system": "You kill the jackal!"
+        },
+        {
+            "system": "Skill 'melee_attack 27 7' completed: Killed the target."
+        },
+        {
+            "ai": "Let's check the kobold corpse for any items."
+        },
+        {
+            "system": "Executing skill 'move_to 27 10'."
+        },
+        {
+            "system": "The jackal bites!"
+        },
+        {
+            "system": "You swap places with your kitten.  You hear some noises."
+        },
+        {
+            "system": "You see here a kobold corpse."
+        },
+        {
+            "system": "Skill 'move_to 27 10' completed: Reached position (27, 10)."
+        },
+        {
+            "ai": "I'll check the kobold corpse for any items."
+        },
+        {
+            "system": "Executing skill 'move_to 26 11'."
+        },
+        {
+            "system": "You see here a kobold corpse."
+        },
+        {
+            "system": "Skill 'move_to 26 11' completed: Reached position (26, 11)."
+        },
+        {
+            "ai": "Let's see if there's anything useful on this kobold corpse."
+        },
+        {
+            "system": "Executing skill 'move_to 26 11'."
+        },
+        {
+            "system": "Skill 'move_to 26 11' completed: Reached position (26, 11)."
+        },
+        {
+            "ai": "Let's see if there's anything useful on this kobold corpse."
+        },
+        {
+            "system": "Executing skill 'move_to 26 11'."
+        },
+        {
+            "system": "Skill 'move_to 26 11' completed: Reached position (26, 11)."
+        },
+        {
+            "ai": "Let's check the kobold corpse for any items."
+        },
+        {
+            "system": "Executing skill 'move_to 26 11'."
+        },
+        {
+            "system": "Skill 'move_to 26 11' completed: Reached position (26, 11)."
+        },
+        {
+            "ai": "Let's see if there's anything useful on this kobold corpse."
+        },
+        {
+            "system": "Executing skill 'move_to 27 10'."
+        },
+        {
+            "system": "You see here a kobold corpse."
+        },
+        {
+            "system": "Skill 'move_to 27 10' completed: Reached position (27, 10)."
+        },
+        {
+            "ai": "Let's check the kobold corpse for any items."
+        },
+        {
+            "system": "Executing skill 'loot 27 10'."
+        },
+        {
+            "system": "Loot in what direction?"
+        },
+        {
+            "system": "Skill 'loot 27 10' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        }
+    ]
+}

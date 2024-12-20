@@ -1,0 +1,90 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing a partially observable rogue-like.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (75, 7).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'Loot in what direction?'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- stairs up at (74,7) reachable in 1 steps\n- sink at (75,7) reachable in 0 steps\n\nClose Monsters:\n- tame kitten at (75,6) 1 steps north\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 0 can be further explored.\n\nInventory:\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 20\ndexterity: 11\nconstitution: 18\nintelligence: 9\nwisdom: 8\ncharisma: 9\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 0\nlevel: 1\nexp: 0\nscore: 0\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I attempted to loot the sink, but the command failed because the skill 'loot' does not exist. I am currently at position (75, 7) next to the sink and a tame kitten is nearby.\",\n        \"reasoning\": \"Since I cannot loot the sink directly, I should explore other options. I can either check the stairs to see if they lead to another level or interact with the kitten. However, I should prioritize exploring the area further.\",\n        \"speak\": \"I need to find another way to explore or interact with my surroundings since looting the sink didn't work.\"\n    },\n    \"skill\": {\n        \"name\": \"move_to\",\n        \"x\": 74,\n        \"y\": 7\n    }\n}",
+    "context": [
+        {
+            "ai": "I will try to kick open the vertical closed door to continue my exploration."
+        },
+        {
+            "system": "Executing skill 'kick 73 5'."
+        },
+        {
+            "system": "You swap places with your kitten."
+        },
+        {
+            "system": "In what direction?"
+        },
+        {
+            "system": "As you kick the door, it crashes open!"
+        },
+        {
+            "system": "Skill 'kick 73 5' completed"
+        },
+        {
+            "ai": "Let's check the sink for any items or useful resources."
+        },
+        {
+            "system": "Executing skill 'move_to 75 7'."
+        },
+        {
+            "system": "The kitten misses the newt."
+        },
+        {
+            "system": "Skill 'move_to 75 7' completed: Reached position (75, 7)."
+        },
+        {
+            "ai": "Let's check the sink for any items that might help us."
+        },
+        {
+            "system": "Executing skill 'move_to 75 7'."
+        },
+        {
+            "system": "Skill 'move_to 75 7' completed: Reached position (75, 7)."
+        },
+        {
+            "ai": "I will attempt to kick open the closed door to continue my exploration."
+        },
+        {
+            "system": "Executing skill 'kick 75 9'."
+        },
+        {
+            "system": "The kitten bites the newt.  The newt is killed!--More--"
+        },
+        {
+            "system": "The kitten eats a newt corpse."
+        },
+        {
+            "system": "In what direction?"
+        },
+        {
+            "system": "As you kick the door, it crashes open!"
+        },
+        {
+            "system": "Skill 'kick 75 9' completed"
+        },
+        {
+            "ai": "Let's check the sink for any items that might help us."
+        },
+        {
+            "system": "Executing skill 'move_to 75 7'."
+        },
+        {
+            "system": "Skill 'move_to 75 7' completed: Reached position (75, 7)."
+        },
+        {
+            "ai": "Let's see what's in the sink!"
+        },
+        {
+            "system": "Executing skill 'loot 75 7'."
+        },
+        {
+            "system": "Loot in what direction?"
+        },
+        {
+            "system": "Skill 'loot 75 7' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        }
+    ]
+}

@@ -1,0 +1,132 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing a partially observable rogue-like.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (57, 5).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'As you kick the door, it crashes open!'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- stairs up at (57,4) reachable in 1 steps\n- gold piece at (64,6) reachable in 7 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 0 can be further explored.\n\nInventory:\n$: 7 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: 2 food rations\nf: a dwarvish mithril-coat\ng: a smoky potion\nh: a lichen corpse\ni: a long sword\nj: 10 darts\nk: a jackal corpse\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 20\ndexterity: 11\nconstitution: 18\nintelligence: 9\nwisdom: 8\ncharisma: 9\nenergy: 1 / 1\ndepth: 2\ndungeon number: 0\ngold: 7\nlevel: 1\nexp: 11\nscore: 101\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I successfully kicked open the door, allowing me to explore the new room. There are stairs up at (57,4) and a gold piece at (64,6) that I can reach in 7 steps. There are no nearby monsters, so I can explore safely.\",\n        \"reasoning\": \"I should move towards the gold piece to collect it, as it will increase my resources. After that, I can decide whether to explore further or head back up the stairs.\",\n        \"speak\": \"Let's go grab that gold piece!\"\n    },\n    \"skill\": {\n        \"name\": \"move_to\",\n        \"x\": 64,\n        \"y\": 6\n    }\n}",
+    "context": [
+        {
+            "system": "You see here a jackal corpse."
+        },
+        {
+            "system": "Loot in what direction?"
+        },
+        {
+            "system": "Skill 'loot 9 3' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'loot' does not exist.'."
+        },
+        {
+            "ai": "I need to loot the jackal corpse to see if it has anything useful."
+        },
+        {
+            "system": "Executing skill 'press_key w'."
+        },
+        {
+            "system": "Pressing key 'w'."
+        },
+        {
+            "system": "What a strange direction!  Never mind."
+        },
+        {
+            "system": "Skill 'press_key w' completed"
+        },
+        {
+            "ai": "I need to check the jackal corpse for any items."
+        },
+        {
+            "system": "Executing skill 'look'."
+        },
+        {
+            "system": "You see here a jackal corpse."
+        },
+        {
+            "system": "Skill 'look' completed"
+        },
+        {
+            "ai": "I'll try to pick up the jackal corpse to see if it has anything useful."
+        },
+        {
+            "system": "Executing skill 'pickup 9 3'."
+        },
+        {
+            "system": "k - a jackal corpse."
+        },
+        {
+            "system": "Skill 'pickup 9 3' completed"
+        },
+        {
+            "ai": "I've got the jackal corpse. Now, let's head back to my kitten and see what to do next."
+        },
+        {
+            "system": "Executing skill 'move_to 10 4'."
+        },
+        {
+            "system": "You swap places with your kitten."
+        },
+        {
+            "system": "Skill 'move_to 10 4' completed: Reached position (10, 4)."
+        },
+        {
+            "ai": "I need to decide whether to explore more in corridor 15 or check out room 12 for additional resources."
+        },
+        {
+            "system": "Executing skill 'go_to 12'."
+        },
+        {
+            "system": "Skill 'go_to 12' completed: Reached the room with id 12"
+        },
+        {
+            "ai": "I need to decide whether to explore this room more or head down the stairs."
+        },
+        {
+            "system": "Executing skill 'go_to 14'."
+        },
+        {
+            "system": "You hear the footsteps of a guard on patrol."
+        },
+        {
+            "system": "Skill 'go_to 14' completed: Reached the room with id 14"
+        },
+        {
+            "ai": "I need to decide whether to explore corridor 15 or check room 12 for more resources."
+        },
+        {
+            "system": "Executing skill 'go_to 12'."
+        },
+        {
+            "system": "Skill 'go_to 12' completed: Reached the room with id 12"
+        },
+        {
+            "ai": "I think it's time to head down the stairs and see what the next level has in store for me."
+        },
+        {
+            "system": "Executing skill 'down 11 3'."
+        },
+        {
+            "system": "Moving to (11,3)"
+        },
+        {
+            "system": "You descend the stairs.--More--"
+        },
+        {
+            "system": "Changed dungeon level from (0, 1) to (0, 2)\nFound a new room with ID 0"
+        },
+        {
+            "system": "Skill 'down 11 3' completed"
+        },
+        {
+            "ai": "Let's see if I can kick open that door to explore further."
+        },
+        {
+            "system": "Executing skill 'kick 56 6'."
+        },
+        {
+            "system": "In what direction?"
+        },
+        {
+            "system": "As you kick the door, it crashes open!"
+        },
+        {
+            "system": "Skill 'kick 56 6' completed"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (5, 7).\n        avoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\n        Game message 'Pick up what?\nWeapons\na - a +0 dagger\nComestibles\nb - an uncursed food ration\n(end)'.\n        You haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- egg at (7,2) reachable in 5 steps\n- scroll labeled VENZAR BORGAVVE at (4,5) reachable in 2 steps\n- stairs up and food ration at (5,7) reachable in 0 steps\n\ncorridor 1 reachable in 2 steps contains:\n- vertical closed door at (33,6) reachable in 29 steps\n- orcish dagger at (30,8) reachable in 26 steps\n- boulder at (34,8) reachable in 30 steps\n- horizontal closed door at (18,9) reachable in 14 steps\n- horizontal open door at (22,14) reachable in 19 steps\n- vertical open door at (28,16) reachable in 26 steps\n\nroom 2 reachable in 20 steps contains:\n- horizontal open door at (22,14) reachable in 19 steps\n- horizontal open door at (25,14) reachable in 24 steps\n- jackal corpse at (24,15) reachable in 22 steps\n- vertical open door at (28,16) reachable in 26 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nvertical closed door at (33, 6) blocks progress in corridor 1.\nhorizontal closed door at (18, 9) blocks progress in corridor 1.\nboulder at (34, 8) blocks progress in corridor 1.\n\nInventory:\n$: 10 gold pieces\na: a +1 long sword\nc: an uncursed +3 small shield (being worn)\ne: a food ration\n\nStats:\nHP: 16 / 16\narmor class: 6\nstrength: 22\ndexterity: 10\nconstitution: 17\nintelligence: 7\nwisdom: 8\ncharisma: 11\nenergy: 2 / 2\ndepth: 2\ndungeon number: 0\ngold: 10\nlevel: 1\nexp: 8\nscore: 92\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\nHere is general advice: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I picked up the uncursed food ration, and I have a +1 long sword and a +3 small shield in my inventory. I need to create a stash near the stairs to manage my items effectively.\",\n        \"reasoning\": \"I should drop any unnecessary items and keep only useful ones in my stash. Since I have a food ration and a long sword, I can drop the dagger to lighten my load.\",\n        \"speak\": \"I need to drop the dagger and organize my stash at the stairs.\"\n    },\n    \"skill\": {\n        \"name\": \"drop\",\n        \"item\": \"a\"\n    }\n}",
+    "context": [
+        {
+            "system": "The jackal bites!\nA jackal appeared at (13,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A jackal appeared at (13,10).'."
+        },
+        {
+            "ai": "I need to take care of this jackal before I can stash my items."
+        },
+        {
+            "system": "Executing skill 'melee_attack 13 10'."
+        },
+        {
+            "system": "The jackal bites!"
+        },
+        {
+            "system": "You kill the jackal!"
+        },
+        {
+            "system": "Skill 'melee_attack 13 10' completed: Killed the target."
+        },
+        {
+            "ai": "I need to head to the stairs to create a stash for my items."
+        },
+        {
+            "system": "Executing skill 'move_to 5 7'."
+        },
+        {
+            "system": "There is a staircase up here.  You see here a +1 long sword."
+        },
+        {
+            "system": "Skill 'move_to 5 7' completed: Reached position (5, 7)."
+        },
+        {
+            "ai": "I found a +1 long sword! I'll pick it up and create a stash here."
+        },
+        {
+            "system": "Executing skill 'pickup 5 7'."
+        },
+        {
+            "system": "a - a +1 long sword."
+        },
+        {
+            "system": "Skill 'pickup 5 7' completed"
+        },
+        {
+            "ai": "I need to create a stash here at the stairs to manage my items effectively."
+        },
+        {
+            "system": "Executing skill 'drop b'."
+        },
+        {
+            "system": "What do you want to drop? [$a-e or ?*]"
+        },
+        {
+            "system": "Pressing key 'b'."
+        },
+        {
+            "system": "You drop a +0 dagger."
+        },
+        {
+            "system": "Skill 'drop b' completed"
+        },
+        {
+            "ai": "I need to organize my stash at the stairs to keep my inventory manageable."
+        },
+        {
+            "system": "Executing skill 'drop d'."
+        },
+        {
+            "system": "What do you want to drop? [$acde or ?*]"
+        },
+        {
+            "system": "Pressing key 'd'."
+        },
+        {
+            "system": "You drop an uncursed food ration."
+        },
+        {
+            "system": "Skill 'drop d' completed"
+        },
+        {
+            "ai": "I've organized my stash a bit more, but I need to keep an eye out for more useful items and possibly an altar."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "A food ration appeared at (5,7)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A food ration appeared at (5,7).'."
+        },
+        {
+            "ai": "I found a food ration at the stairs. I should pick it up and then continue exploring."
+        },
+        {
+            "system": "Executing skill 'pickup 5 7'."
+        },
+        {
+            "system": "Moving to (5,7)"
+        },
+        {
+            "system": "There is a staircase up here.\nThings that are here:\nan uncursed food ration\na +0 dagger\n--More--"
+        },
+        {
+            "system": "Pick up what?\nWeapons\na - a +0 dagger\nComestibles\nb - an uncursed food ration\n(end)"
+        },
+        {
+            "system": "Skill 'pickup 5 7' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'explore_level' does not exist.'."
+        }
+    ]
+}

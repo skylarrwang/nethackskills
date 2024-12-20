@@ -1,0 +1,4 @@
+{
+    "thoughts": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'look' does not have a parameter 'x'.'.",
+    "thought_type": "System"
+}

@@ -1,0 +1,60 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (39, 3).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message ''.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 2 which contains:\n- vertical open door at (39,3) reachable in 0 steps\n\nroom 3 reachable in 1 steps contains:\n- vertical open door at (39,3) reachable in 0 steps\n- orc corpse at (42,7) reachable in 5 steps\n- gold piece at (45,8) reachable in 6 steps\n\ncorridor 1 reachable in 24 steps contains:\nNo objects or features\n\nroom 0 reachable in 18 steps contains:\n- stairs up at (18,6) reachable in 21 steps\n- gold piece at (21,8) reachable in 19 steps\n\nClose Monsters:\n- tame little dog at (38,3) 1 steps west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 3 can be further explored.\ncorridor 1 can be further explored.\nroom 0 can be further explored.\n\nInventory:\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: an uncursed oil lamp\nf: 2 food rations\n\nStats:\nHP: 16 / 16\narmor class: 6\nstrength: 21\ndexterity: 16\nconstitution: 11\nintelligence: 8\nwisdom: 12\ncharisma: 7\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 0\nlevel: 1\nexp: 0\nscore: 0\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I found an orc corpse and a gold piece in the new room. There are no immediate threats nearby, and I have collected food rations for sustenance. My health is full, and I have not yet encountered any monsters to fight for experience.\",\n        \"reasoning\": \"I should explore the room further to see if there are any monsters to engage for experience. If I find any, I will plan my attack carefully, using ranged attacks if necessary. If the situation becomes overwhelming, I will retreat to the stairs.\",\n        \"speak\": \"Let's explore the room further and see if we can find some monsters to fight.\"\n    },\n    \"skill\": {\n        \"name\": \"explore_level\"\n    }\n}",
+    "context": [
+        {
+            "human": "Here is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival."
+        },
+        {
+            "ai": "I will explore the room to find more monsters to fight and gain experience."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 1\nA food ration appeared at (19,7)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A food ration appeared at (19,7).'."
+        },
+        {
+            "ai": "I'm going to grab the food ration to ensure I have enough supplies, then I'll decide on my next move."
+        },
+        {
+            "system": "Executing skill 'pickup 19 7'."
+        },
+        {
+            "system": "Moving to (19,7)"
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "You see here 2 food rations."
+        },
+        {
+            "system": "f - 2 food rations."
+        },
+        {
+            "system": "Skill 'pickup 19 7' completed"
+        },
+        {
+            "ai": "I have gathered some food rations. Now, I will continue exploring to find monsters to fight."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 2"
+        },
+        {
+            "system": "The door opens.\nFound a new room with ID 3"
+        },
+        {
+            "system": "A orc corpse appeared at (42,7).\nA gold piece appeared at (45,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A orc corpse appeared at (42,7).'."
+        }
+    ]
+}

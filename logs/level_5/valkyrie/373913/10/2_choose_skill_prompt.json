@@ -1,0 +1,69 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (50, 14).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'There is a human corpse here; eat it? [ynq] (n)'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- human corpse at (50,14) reachable in 0 steps\n- vertical closed door at (52,15) reachable in 2 steps\n- stairs up at (50,16) reachable in 2 steps\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 0 can be further explored.\nvertical closed door at (52, 15) blocks progress in room 0.\n\nInventory:\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\n\nStats:\nHP: 16 / 18\narmor class: 6\nstrength: 19\ndexterity: 14\nconstitution: 15\nintelligence: 9\nwisdom: 7\ncharisma: 10\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 0\nlevel: 1\nexp: 5\nscore: 20\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I attempted to eat the human corpse, but I didn't confirm the action. I need to heal since I lost 1 constitution from the poisoned dart. My health is currently at 16 out of 18, which is above 50%, but I should still be cautious.\",\n        \"reasoning\": \"I should eat the food ration to restore my health and then explore the area further. I can also check the closed door to see if it leads to more monsters or loot.\",\n        \"speak\": \"I need to eat something to heal up and then check out the closed door.\"\n    },\n    \"skill\": {\n        \"name\": \"eat\",\n        \"item\": \"food ration\"\n    }\n}",
+    "context": [
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'search' does not exist.'."
+        },
+        {
+            "ai": "I will attack the little dog to gain some experience."
+        },
+        {
+            "system": "Executing skill 'melee_attack 51 15'."
+        },
+        {
+            "system": "Velkommen Agent, welcome to NetHack!  You are a lawful dwarven Valkyrie."
+        },
+        {
+            "system": "The little dog yelps!  You kill the poor little dog!--More--"
+        },
+        {
+            "system": "You hear the rumble of distant thunder..."
+        },
+        {
+            "system": "Skill 'melee_attack 51 15' completed: Killed the target."
+        },
+        {
+            "ai": "I should check the human corpse for items and then explore the area more to find more monsters to fight."
+        },
+        {
+            "system": "Executing skill 'loot 50 14'."
+        },
+        {
+            "system": "Moving to (50,14)"
+        },
+        {
+            "system": "Things that are here:\na human corpse\n2 eggs\n8 darts\n--More--"
+        },
+        {
+            "system": "A little dart shoots out at you!  You are hit by a little dart.--More--"
+        },
+        {
+            "system": "The dart was poisoned!  You feel very sick!\nLost 1 constitution"
+        },
+        {
+            "system": "You don't find anything here to loot."
+        },
+        {
+            "system": "Skill 'loot 50 14' completed"
+        },
+        {
+            "ai": "I need to heal up before I continue exploring or fighting."
+        },
+        {
+            "system": "Executing skill 'eat d'."
+        },
+        {
+            "system": "There is a human corpse here; eat it? [ynq] (n)"
+        },
+        {
+            "system": "Pressing key 'd'."
+        },
+        {
+            "system": "There is a human corpse here; eat it? [ynq] (n)"
+        },
+        {
+            "system": "Skill 'eat d' completed"
+        }
+    ]
+}

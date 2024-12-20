@@ -1,0 +1,117 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (26, 11).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'You destroy the kobold zombie!'.\nYou haven't prayed yet.\n\nRooms:\nYou are in corridor 1 which contains:\n- kobold corpse at (27,10) reachable in 1 steps\n\nroom 0 reachable in 5 steps contains:\n- stairs up at (25,15) reachable in 5 steps\n- vertical open door at (13,16) reachable in 17 steps\n- scroll labeled FNORD at (22,16) reachable in 8 steps\n- fountain at (24,16) reachable in 6 steps\n\nClose Monsters:\n- tame kitten at (26,12) 1 steps south\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 1 can be further explored.\nroom 0 can be further explored.\n\nInventory:\n$: 7 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: 2 uncursed food rations\n\nStats:\nHP: 18 / 18\narmor class: 6\nstrength: 19\ndexterity: 12\nconstitution: 19\nintelligence: 9\nwisdom: 8\ncharisma: 8\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 7\nlevel: 1\nexp: 1\nscore: 11\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\nHere is general advice: Your task is to clear Minetown and benefit from its resources. Tips:\n        - Use the stairs in Dungeon Level 2-4 to access the Gnomish Mines and find Minetown.\n        - When entering Minetown, stay near the stairs initially to safely deal with incoming monsters.\n        - Use the shops in Minetown to identify items by checking prices. Avoid angering shopkeepers.\n        - If there is an altar, use it to identify blessed, cursed, or uncursed items.\n        - Minetown is a safe zone for exploration, but be cautious of thieves that may steal your items.\n        - Do not descend further into the Mines until you are well-prepared with proper gear and resistances.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I just defeated a kobold zombie, leaving behind a kobold corpse. I am currently in corridor 1, and there are still areas to explore. I need to decide whether to investigate the corpse or continue exploring the corridor.\",\n        \"reasoning\": \"Since the corpse might have items or resources, I should check it out. After that, I can continue exploring the corridor or return to the previous room to check the fountain or the scroll.\",\n        \"speak\": \"Let's check the kobold corpse for any items before moving on.\"\n    },\n    \"skill\": {\n        \"name\": \"loot\",\n        \"x\": 27,\n        \"y\": 10\n    }\n}",
+    "context": [
+        {
+            "ai": "I will pick up the gold piece to increase my resources."
+        },
+        {
+            "system": "Executing skill 'pickup 17 16'."
+        },
+        {
+            "system": "Moving to (17,16)"
+        },
+        {
+            "system": "The kitten picks up a scroll labeled FNORD."
+        },
+        {
+            "system": "The kitten drops a scroll labeled FNORD."
+        },
+        {
+            "system": "You hear a door open.  The kitten picks up a scroll labeled FNORD."
+        },
+        {
+            "system": "You see here 7 gold pieces."
+        },
+        {
+            "system": "$ - 7 gold pieces."
+        },
+        {
+            "system": "Skill 'pickup 17 16' completed"
+        },
+        {
+            "ai": "I need to check out the closed door to see if I can continue exploring Minetown."
+        },
+        {
+            "system": "Executing skill 'move_to 13 16'."
+        },
+        {
+            "system": "The door opens.  The kitten drops a scroll labeled FNORD."
+        },
+        {
+            "system": "Skill 'move_to 13 16' completed: Tile (13, 16) is blocked, stopping adjacent to it."
+        },
+        {
+            "ai": "The door is blocked, so I need to explore other areas or return to the stairs."
+        },
+        {
+            "system": "Executing skill 'move_to 24 16'."
+        },
+        {
+            "system": "You swap places with your kitten.--More--"
+        },
+        {
+            "system": "You see here a scroll labeled FNORD."
+        },
+        {
+            "system": "You stop.  Your kitten is in the way!"
+        },
+        {
+            "system": "The kitten picks up a scroll labeled FNORD."
+        },
+        {
+            "system": "The kitten drops a scroll labeled FNORD."
+        },
+        {
+            "system": "Skill 'move_to 24 16' completed: Reached position (24, 16)."
+        },
+        {
+            "ai": "I should read the scroll labeled FNORD to see what it does."
+        },
+        {
+            "system": "Executing skill 'read a'."
+        },
+        {
+            "system": "What do you want to read? [*]"
+        },
+        {
+            "system": "Pressing key 'a'."
+        },
+        {
+            "system": "That is a silly thing to read."
+        },
+        {
+            "system": "Skill 'read a' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'look' does not have a parameter 'x'.'."
+        },
+        {
+            "ai": "I need to explore more or check the fountain for any potential benefits."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 1"
+        },
+        {
+            "system": "A kobold zombie appeared at (27,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A kobold zombie appeared at (27,10).'."
+        },
+        {
+            "ai": "I need to take care of that kobold zombie before I can proceed."
+        },
+        {
+            "system": "Executing skill 'melee_attack 27 10'."
+        },
+        {
+            "system": "You destroy the kobold zombie!\nA kobold corpse appeared at (27,10)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A kobold corpse appeared at (27,10).'."
+        }
+    ]
+}

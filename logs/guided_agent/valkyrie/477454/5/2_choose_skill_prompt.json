@@ -1,0 +1,48 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (71, 15).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'There is a human corpse here; eat it? [ynq] (n)'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- stairs up at (73,13) reachable in 2 steps\n- human corpse at (71,15) reachable in 0 steps\n- ragged spellbook at (76,17) reachable in 5 steps\n\nClose Monsters:\n- tame little dog at (75,15) 4 steps east\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nroom 0 can be further explored.\n\nInventory:\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\n\nStats:\nHP: 13 / 18\narmor class: 6\nstrength: 18\ndexterity: 10\nconstitution: 20\nintelligence: 9\nwisdom: 8\ncharisma: 10\nenergy: 1 / 1\ndepth: 1\ndungeon number: 0\ngold: 0\nlevel: 1\nexp: 0\nscore: 0\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I attempted to eat the human corpse, but it seems I need to confirm my choice. The game is prompting me to confirm whether I want to eat the corpse or not.\",\n        \"reasoning\": \"I should confirm my choice to eat the human corpse to regain health and experience. After that, I can explore the room further or look for more corpses to eat.\",\n        \"speak\": \"I need to confirm eating the human corpse to regain health and experience.\"\n    },\n    \"skill\": {\n        \"name\": \"press_key\",\n        \"key\": \"y\"\n    }\n}",
+    "context": [
+        {
+            "system": "Started a new game."
+        },
+        {
+            "human": "Your task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else."
+        },
+        {
+            "ai": "I will explore the room further and eat the human corpse to gain experience."
+        },
+        {
+            "system": "Executing skill 'move_to 71 15'."
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "Things that are here:\na human corpse\na lamp\n11 rocks\n--More--"
+        },
+        {
+            "system": "A trap door in the ceiling opens and a rock falls on your head!"
+        },
+        {
+            "system": "Skill 'move_to 71 15' completed: Reached position (71, 15)."
+        },
+        {
+            "ai": "I will eat the human corpse to regain health and experience."
+        },
+        {
+            "system": "Executing skill 'eat a'."
+        },
+        {
+            "system": "There is a human corpse here; eat it? [ynq] (n)"
+        },
+        {
+            "system": "Pressing key 'a'."
+        },
+        {
+            "system": "There is a human corpse here; eat it? [ynq] (n)"
+        },
+        {
+            "system": "Skill 'eat a' completed"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+{
+    "exception": "Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'.",
+    "with_traceback": "Traceback (most recent call last):\n  File \"/Users/srwang/Documents/pathways_fall/NetPlay/netplay/nethack_agent/agent.py\", line 155, in _solve_task\n    skill_choice = self.skill_selector.choose_skill(self)\n  File \"/Users/srwang/Documents/pathways_fall/NetPlay/netplay/nethack_agent/skill_selection.py\", line 161, in choose_skill\n    return self._internal_choose_skill(agent, SkillRepository(skills), prompt)\n  File \"/Users/srwang/Documents/pathways_fall/NetPlay/netplay/nethack_agent/skill_selection.py\", line 191, in _internal_choose_skill\n    raise Exception(f\"Unable to parse the JSON provided by the LLM. Error message: '{error_message}'.\")\nException: Unable to parse the JSON provided by the LLM. Error message: 'The skill 'drink' does not have a parameter 'x'.'.\n"
+}

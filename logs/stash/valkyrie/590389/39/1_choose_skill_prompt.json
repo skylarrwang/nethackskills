@@ -1,0 +1,138 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (51, 9).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message '$ - 3 gold pieces.'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 0 which contains:\n- gold piece at (50,8) reachable in 1 steps\n- gold piece at (51,9) reachable in 0 steps\n- stairs up and food ration at (53,9) reachable in 2 steps\n- splint mail at (64,9) reachable in 13 steps\n- vertical closed door at (65,9) reachable in 14 steps\n\ncorridor 1 reachable in 4 steps contains:\nNo objects or features\n\ncorridor 2 reachable in 2 steps contains:\n- gold piece at (50,8) reachable in 1 steps\n\nClose Monsters:\n- lichen at (59,9) 8 steps east\n- tame little dog at (51,10) 1 steps south\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 2 can be further explored.\nroom 0 can be further explored.\nvertical closed door at (65, 9) blocks progress in room 0.\n\nInventory:\n$: 3 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\ne: a food ration\nf: a scroll labeled VENZAR BORGAVVE\n\nStats:\nHP: 16 / 16\narmor class: 6\nstrength: 22\ndexterity: 10\nconstitution: 17\nintelligence: 7\nwisdom: 8\ncharisma: 11\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 3\nlevel: 1\nexp: 0\nscore: 3\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\nHere is general advice: Your task is to create a stash near a safe location, such as stairs or an altar. Tips:\n        - Only store useful items like potions, scrolls, wands, or backup weapons. Avoid storing junk.\n        - Use containers such as chests, large boxes, or bags to organize your stash.\n        - Regularly return to your stash to drop unnecessary items and reduce weight.\n        - Avoid carrying too much weight; if you become \"burdened\" or \"stressed,\" prioritize storing heavy items.\n        - Protect fragile items like potions or scrolls by storing them in a sack or bag.\n        - Consider placing your stash near an altar if possible, to identify or bless items as needed.\n\nSkills:\n- zap: Zap a wand in the given cardinal (n, e, s, w) or ordinal direction (ne, se, sw, nw) or target yourself using self. Params: (item_letter: string, direction: string)\n- pickup: Pickup things at your location or specify where you want to pickup an item. Params: (x: Optional[integer], y: Optional[integer])\n- up: Go up a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- down: Go down a staircase at your location or specify the position of the staircase you want to use. Params: (x: Optional[integer], y: Optional[integer])\n- loot: Loot a box on the floor. Params: (x: Optional[integer], y: Optional[integer])\n- offer: Offer a sacrifice to the gods. Params: (x: Optional[integer], y: Optional[integer])\n- drop: Drop an item. Params: (item_letter: Optional[string])\n- read: Read a scroll, spellbook, or something else. Params: (item_letter: Optional[string])\n- put_on: Put on an accessory. Params: (item_letter: Optional[string])\n- remove: Remove an accessory (ring, amulet, or blindfold). Params: (item_letter: Optional[string])\n- takeoff: Take off one piece of armor. Params: (item_letter: Optional[string])\n- wield: Wield a weapon. Params: (item_letter: Optional[string])\n- wear: Wear a piece of armor. Params: (item_letter: Optional[string])\n- apply: Apply (use) a tool. If used on a wand, that wand will be broken, releasing its magic in the process. Params: (item_letter: Optional[string])\n- eat: Eat something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- drink: Drink something from your inventory or straight from the ground. Params: (item_letter: Optional[string])\n- tip: Tip out the content of a container. Params: (item_letter: Optional[string])\n- dip: Dip an object into something. . Params: (item_letter: Optional[string])\n- kick: Kick something. Params: (x: integer, y: integer)\n- rest: Rests n-moves while doing nothing or until something happens (default=5). Params: (count: Optional[integer])\n- cast: Opens your spellbook to cast a spell. Params: ()\n- pay: Pay your shopping bill. Params: ()\n- pray: Pray to the gods for help. Params: ()\n- look: Look at what is under you. Params: ()\n- set_avoid_monster_flag: If set to true skills will try to avoid monsters. Params: (value: bool)\n- melee_attack: Pursues and attacks a given target using melee attacks until it is dead. Params: (x: integer, y: integer)\n- explore_level: Explores the level to find new rooms, as well as hidden doors and corridors. Params: ()\n- move_to: Move to the specified position using pathfinding. Params: (x: integer, y: integer)\n- go_to: Moves to the specified room or corridor using the shortest path possible. Params: (room_id: integer)\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nChoose an skill from the given list of skills.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I picked up 3 gold pieces from my current location. There are still more items to explore in room 0 and corridor 2. I need to be cautious of the lichen nearby, but it seems to be a safe distance away for now.\",\n        \"reasoning\": \"I should continue exploring room 0 to see if there are any more useful items before heading to corridor 2. Once I gather more items, I can return to my stash to drop off anything unnecessary.\",\n        \"speak\": \"Let's keep exploring room 0 for more items before we head to corridor 2.\"\n    },\n    \"skill\": {\n        \"name\": \"explore_level\"\n    }\n}",
+    "context": [
+        {
+            "ai": "I will pick up the scroll and the food ration to store them in my stash later."
+        },
+        {
+            "system": "Executing skill 'pickup 53 8'."
+        },
+        {
+            "system": "Moving to (53,8)"
+        },
+        {
+            "system": "You see here a food ration."
+        },
+        {
+            "system": "e - a food ration."
+        },
+        {
+            "system": "Skill 'pickup 53 8' completed"
+        },
+        {
+            "ai": "I found a food ration and now I'm going to grab a scroll nearby."
+        },
+        {
+            "system": "Executing skill 'pickup 54 8'."
+        },
+        {
+            "system": "Moving to (54,8)"
+        },
+        {
+            "system": "You swap places with your little dog.--More--"
+        },
+        {
+            "system": "You see here a scroll labeled VENZAR BORGAVVE."
+        },
+        {
+            "system": "f - a scroll labeled VENZAR BORGAVVE."
+        },
+        {
+            "system": "Skill 'pickup 54 8' completed"
+        },
+        {
+            "ai": "I'm going to head to the staircase to create a stash for my items."
+        },
+        {
+            "system": "Executing skill 'move_to 53 9'."
+        },
+        {
+            "system": "Skill 'move_to 53 9' completed: Reached position (53, 9)."
+        },
+        {
+            "ai": "I'm going to drop some items here to create a stash for later."
+        },
+        {
+            "system": "Executing skill 'drop d'."
+        },
+        {
+            "system": "What do you want to drop? [a-f or ?*]"
+        },
+        {
+            "system": "Pressing key 'd'."
+        },
+        {
+            "system": "You drop an uncursed food ration."
+        },
+        {
+            "system": "Skill 'drop d' completed"
+        },
+        {
+            "ai": "I've created a stash here. Now, let's explore the corridor for more items."
+        },
+        {
+            "system": "Executing skill 'go_to 1'."
+        },
+        {
+            "system": "Skill 'go_to 1' completed: Reached the corridor with id 1"
+        },
+        {
+            "ai": "Let's explore room 0 to gather more items and see if we can find a safe spot."
+        },
+        {
+            "system": "Executing skill 'go_to 0'."
+        },
+        {
+            "system": "Skill 'go_to 0' completed: Reached the room with id 0"
+        },
+        {
+            "ai": "Let's check out the remaining items in this room before moving on."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "A lichen appeared at (60,8)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A lichen appeared at (60,8).'."
+        },
+        {
+            "ai": "Let's gather more items from this room before heading back to the stash."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 2"
+        },
+        {
+            "system": "The little dog drops a gold piece.\nA gold piece appeared at (51,9)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A gold piece appeared at (51,9).'."
+        },
+        {
+            "ai": "Let's grab that gold piece and see what else we can find!"
+        },
+        {
+            "system": "Executing skill 'pickup 51 9'."
+        },
+        {
+            "system": "Moving to (51,9)"
+        },
+        {
+            "system": "There is a doorway here.  You see here a gold piece."
+        },
+        {
+            "system": "You see here 3 gold pieces."
+        },
+        {
+            "system": "$ - 3 gold pieces."
+        },
+        {
+            "system": "Skill 'pickup 51 9' completed"
+        }
+    ]
+}

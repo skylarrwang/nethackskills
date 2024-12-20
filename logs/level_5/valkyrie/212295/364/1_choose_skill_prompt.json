@@ -1,0 +1,120 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (42, 7).\n        avoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\n        Game message 'Pick up what?\nWeapons\na - a glaive\nGems/Stones\nb - 11 rocks\n(end)'.\n        You haven't prayed yet.\n\nRooms:\nYou are in room 3 which contains:\n- vertical open door at (39,3) reachable in 5 steps\n- glaive at (42,7) reachable in 0 steps\n- horizontal open door at (40,9) reachable in 3 steps\n\ncorridor 2 reachable in 6 steps contains:\n- vertical open door at (39,3) reachable in 5 steps\n\nroom 10 reachable in 35 steps contains:\n- bars at (4,4) reachable in 40 steps\n- stairs down at (9,6) reachable in 35 steps\n- vertical open door at (10,7) reachable in 34 steps\n\ncorridor 12 reachable in 26 steps contains:\n- vertical open door at (10,7) reachable in 34 steps\n- vertical closed door at (27,10) reachable in 30 steps\n\nroom 0 reachable in 23 steps contains:\n- stairs up at (18,6) reachable in 26 steps\n- gold piece at (21,8) reachable in 24 steps\n\nroom 7 reachable in 14 steps contains:\n- vertical closed door at (55,7) reachable in 17 steps\n- lichen corpse at (60,7) reachable in 18 steps\n- large box at (66,7) reachable in 24 steps\n- vertical open door at (55,10) reachable in 13 steps\n\ncorridor 6 reachable in 5 steps contains:\n- vertical open door at (55,10) reachable in 13 steps\n\ncorridor 4 reachable in 4 steps contains:\n- horizontal open door at (40,9) reachable in 3 steps\n\nroom 5 reachable in 11 steps contains:\nNo objects or features\n\nClose Monsters:\n- tame little dog at (41,5) 2 steps north-west\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nvertical closed door at (27, 10) blocks progress in corridor 12.\nvertical closed door at (55, 7) blocks progress in room 7.\n\nInventory:\n$: 10 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: an uncursed oil lamp\nf: 2 food rations\n\nStats:\nHP: 7 / 16\narmor class: 6\nstrength: 21\ndexterity: 16\nconstitution: 11\nintelligence: 8\nwisdom: 12\ncharisma: 7\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 10\nlevel: 1\nexp: 7\nscore: 38\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nHere is your current specific task: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\nHere is general advice: Your task is to reach experience level 5 or higher without descending past Dungeon Level 5. Tips:\n        - Fight monsters on the first 5 levels to safely gain experience. Avoid descending too quickly.\n        - Stay on the stairs to escape if overwhelmed by monsters.\n        - Avoid fighting groups of monsters unless you have an escape route planned.\n        - Heal whenever your health drops below 50%.\n        - Use ranged attacks or spells to deal with dangerous monsters from a safe distance.\n        - Use the \"search\" command to locate hidden doors or traps when exploration seems blocked.\n        - Avoid using spells or abilities that consume too much energy early on unless necessary for survival.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have picked up a glaive and found some gold, but I am currently low on health (7 HP out of 16). I need to heal before continuing to explore or engage in combat. I also have a food ration in my inventory that I can use for healing.\",\n        \"reasoning\": \"My priority is to heal up to ensure I can safely explore further or fight any monsters I encounter. After healing, I can decide whether to explore more or return to a safer area.\",\n        \"speak\": \"I need to heal up before I continue exploring. I'll use a food ration.\"\n    },\n    \"skill\": {\n        \"name\": \"type_text\",\n        \"text\": \"e\"\n    }\n}",
+    "context": [
+        {
+            "ai": "Let's pick up that gold piece and see what else we can find!"
+        },
+        {
+            "system": "Executing skill 'pickup 5 5'."
+        },
+        {
+            "system": "Moving to (5,5)"
+        },
+        {
+            "system": "You see here 7 gold pieces."
+        },
+        {
+            "system": "$ - 7 gold pieces."
+        },
+        {
+            "system": "Skill 'pickup 5 5' completed"
+        },
+        {
+            "system": "A exception occured: Unable to parse the JSON provided by the LLM. Error message: 'A skill with the name 'search' does not exist.'."
+        },
+        {
+            "ai": "I found some gold, but I can't pick it up. I need to explore more or find a way to open the door."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "The door resists!"
+        },
+        {
+            "system": "The door resists!"
+        },
+        {
+            "system": "The door opens."
+        },
+        {
+            "system": "Found a new corridor with ID 11"
+        },
+        {
+            "system": "The corridors [9,11] are actually the same. They have been merged into a single corridor with ID 12."
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "You hear some noises."
+        },
+        {
+            "system": "You swap places with your little dog."
+        },
+        {
+            "system": "A grid bug appeared at (30,12)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A grid bug appeared at (30,12).'."
+        },
+        {
+            "ai": "I need to explore this corridor more thoroughly and be ready for any potential threats."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "You kill the grid bug!"
+        },
+        {
+            "system": "You see here a gold piece."
+        },
+        {
+            "system": "A glaive appeared at (42,7)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A glaive appeared at (42,7).'."
+        },
+        {
+            "ai": "I'm going to pick up the glaive to enhance my combat capabilities."
+        },
+        {
+            "system": "Executing skill 'move_to 42 7'."
+        },
+        {
+            "system": "Things that are here:\na glaive\n10 rocks\n--More--"
+        },
+        {
+            "system": "A trap door in the ceiling opens and a rock falls on your head!"
+        },
+        {
+            "system": "Skill 'move_to 42 7' completed: Reached position (42, 7)."
+        },
+        {
+            "ai": "I've found a glaive and some gold, but I need to be careful after taking damage from a falling rock. I should pick up the glaive and then heal."
+        },
+        {
+            "system": "Executing skill 'pickup 42 7'."
+        },
+        {
+            "system": "Pick up what?\nWeapons\na - a glaive\nGems/Stones\nb - 11 rocks\n(end)"
+        },
+        {
+            "system": "Skill 'pickup 42 7' completed"
+        },
+        {
+            "ai": "I need to heal up before I continue exploring. I'll use a food ration."
+        },
+        {
+            "system": "Executing skill 'type_text e'."
+        },
+        {
+            "system": "Pick up what?\nWeapons\na - a glaive\nGems/Stones\nb - 11 rocks\n(end)"
+        },
+        {
+            "system": "Skill 'type_text e' completed"
+        }
+    ]
+}

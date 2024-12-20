@@ -1,0 +1,117 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (7, 6).\n        avoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\n        Game message 'Pick up what?\nArmor\na - an orcish helm\nComestibles\nb - a food ration\n(end)'.\n        You haven't prayed yet.\n\nRooms:\nYou are in room 8 which contains:\n- iron skull cap at (7,6) reachable in 0 steps\n- horizontal open door at (6,8) reachable in 2 steps\n\ncorridor 6 reachable in 4 steps contains:\nNo objects or features\n\ncorridor 9 reachable in 3 steps contains:\nNo objects or features\n\nroom 4 reachable in 9 steps contains:\nNo objects or features\n\ncorridor 10 reachable in 3 steps contains:\n- horizontal open door at (6,8) reachable in 2 steps\n- horizontal open door at (4,13) reachable in 8 steps\n\ncorridor 3 reachable in 21 steps contains:\nNo objects or features\n\nroom 2 reachable in 36 steps contains:\n- food ration at (46,13) reachable in 39 steps\n- vertical closed door at (52,13) reachable in 45 steps\n\ncorridor 1 reachable in 46 steps contains:\n- vertical closed door at (52,13) reachable in 45 steps\n- vertical open door at (65,14) reachable in 58 steps\n\nroom 11 reachable in 9 steps contains:\n- horizontal open door at (4,13) reachable in 8 steps\n- anti magic trap at (5,15) reachable in 10 steps\n- anti magic trap at (4,17) reachable in 12 steps\n\nroom 0 reachable in 59 steps contains:\n- vertical open door at (65,14) reachable in 58 steps\n- stairs up at (69,14) reachable in 62 steps\n\ncorridor 12 reachable in 14 steps contains:\n- boulder at (34,15) reachable in 39 steps\n\nClose Monsters:\n- tame kitten at (8,7) 1 steps south-east\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\ncorridor 6 can be further explored.\ncorridor 1 can be further explored.\nroom 0 can be further explored.\nboulder at (34, 15) blocks progress in corridor 12.\n\nInventory:\n$: 3 gold pieces\na: a +1 long sword (weapon in hand)\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield (being worn)\nd: an uncursed food ration\ne: a tin\nf: a yellowish brown gem\ng: a triangular amulet\nh: an orcish dagger\n\nStats:\nHP: 16 / 16\narmor class: 6\nstrength: 24\ndexterity: 12\nconstitution: 14\nintelligence: 8\nwisdom: 8\ncharisma: 9\nenergy: 2 / 2\ndepth: 1\ndungeon number: 0\ngold: 3\nlevel: 1\nexp: 13\nscore: 55\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Lawful\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have successfully picked up an orcish dagger and an orcish helm. The kitten is nearby, and I have just defeated a goblin. The area seems relatively clear for now, but I need to be cautious as I explore further.\",\n        \"reasoning\": \"I should equip the orcish helm to improve my defense and then consider moving through the open door to explore corridor 10 or further into room 8. I need to stay alert for any potential threats.\",\n        \"speak\": \"I've got some new gear. Time to equip the helm and decide where to explore next.\"\n    },\n    \"skill\": {\n        \"name\": \"type_text\",\n        \"text\": \"a\"\n    }\n}",
+    "context": [
+        {
+            "system": "A orcish dagger appeared at (6,6)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A orcish dagger appeared at (6,6).'."
+        },
+        {
+            "ai": "I need to grab that orcish dagger and prepare for any further threats."
+        },
+        {
+            "system": "Executing skill 'pickup 6 6'."
+        },
+        {
+            "system": "Moving to (6,6)"
+        },
+        {
+            "system": "You see here an orcish dagger."
+        },
+        {
+            "system": "h - an orcish dagger."
+        },
+        {
+            "system": "Skill 'pickup 6 6' completed"
+        },
+        {
+            "ai": "I've picked up an orcish dagger. Now, I need to decide whether to explore further or retreat to safety."
+        },
+        {
+            "system": "Executing skill 'move_to 6 8'."
+        },
+        {
+            "system": "The jackal just misses!\nA jackal appeared at (5,9)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A jackal appeared at (5,9).'."
+        },
+        {
+            "ai": "I need to take care of that jackal before it gets another chance to attack."
+        },
+        {
+            "system": "Executing skill 'melee_attack 5 9'."
+        },
+        {
+            "system": "The jackal just misses!"
+        },
+        {
+            "system": "You kill the jackal!  The kitten misses the goblin."
+        },
+        {
+            "system": "Skill 'melee_attack 5 9' completed: Killed the target."
+        },
+        {
+            "ai": "I need to take out that goblin before it becomes a problem."
+        },
+        {
+            "system": "Executing skill 'melee_attack 8 7'."
+        },
+        {
+            "system": "The kitten misses the goblin."
+        },
+        {
+            "system": "The kitten misses the goblin."
+        },
+        {
+            "system": "You kill the goblin!\nA iron skull cap appeared at (7,6)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A iron skull cap appeared at (7,6).'."
+        },
+        {
+            "ai": "Let's grab that iron skull cap and see what else we can find."
+        },
+        {
+            "system": "Executing skill 'pickup 7 6'."
+        },
+        {
+            "system": "Moving to (7,6)"
+        },
+        {
+            "system": "Things that are here:\nan orcish helm\na food ration\n--More--"
+        },
+        {
+            "system": "Pick up what?\nArmor\na - an orcish helm\nComestibles\nb - a food ration\n(end)"
+        },
+        {
+            "system": "Skill 'pickup 7 6' completed"
+        },
+        {
+            "ai": "I've gathered some useful items. Let's equip the orcish helm and see what lies ahead."
+        },
+        {
+            "system": "Executing skill 'type_text a'."
+        },
+        {
+            "system": "Pick up what?\nArmor\na + an orcish helm\nComestibles\nb - a food ration\n(end)"
+        },
+        {
+            "system": "Skill 'type_text a' completed"
+        },
+        {
+            "ai": "I've got some new gear. Time to equip the helm and decide where to explore next."
+        },
+        {
+            "system": "Executing skill 'type_text a'."
+        },
+        {
+            "system": "Pick up what?\nArmor\na - an orcish helm\nComestibles\nb - a food ration\n(end)"
+        },
+        {
+            "system": "Skill 'type_text a' completed"
+        }
+    ]
+}

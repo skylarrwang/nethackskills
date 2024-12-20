@@ -1,0 +1,147 @@
+{
+    "prompt": "Context:\nYou are an agent that is playing the rogue-like NetHack.\nAlways respond in first person.\n\nAgent Information:\nYou are at position (33, 15).\navoid_monster_flag is set to False: Skills will fight monsters if they are in the way.\nGame message 'There is a melon here; eat it? [ynq] (n)'.\nYou haven't prayed yet.\n\nRooms:\nYou are in room 4 which contains:\n- melon at (33,15) reachable in 0 steps\n\nroom 2 reachable in 29 steps contains:\n- vertical closed door at (16,3) reachable in 30 steps\n\ncorridor 1 reachable in 22 steps contains:\nNo objects or features\n\nroom 0 reachable in 18 steps contains:\n- stairs up at (14,14) reachable in 19 steps\n\ncorridor 3 reachable in 3 steps contains:\nNo objects or features\n\nClose Monsters:\nNo monsters close to you\n\nDistant Monsters:\nNo monsters in the distance\n\nExploration Status:\nvertical closed door at (16, 3) blocks progress in room 2.\ncorridor 3 can be further explored.\nroom 4 can be further explored.\n\nInventory:\n$: 6 gold pieces\na: a rusty +1 long sword\nb: a +0 dagger (alternate weapon; not wielded)\nc: an uncursed +3 small shield\nd: an uncursed food ration\ne: an uncursed oil lamp\nf: a fox corpse\ng: a fizzy potion\nh: a cursed two-handed sword (weapon in hands)\ni: a tin opener\n\nStats:\nHP: 16 / 16\narmor class: 10\nstrength: 20\ndexterity: 10\nconstitution: 18\nintelligence: 9\nwisdom: 9\ncharisma: 12\nenergy: 2 / 2\ndepth: 2\ndungeon number: 0\ngold: 6\nlevel: 1\nexp: 7\nscore: 84\nencumbrance: unencumbered\nhunger: not hungry\nalignment: Neutral\nconditions: None\n\nTask:\nYour task is to win the game. Tips:\n- Stay on the first 2 levels (depth=1/2, dungeon number=0) until you reached level 8.\n- You can kick open locked doors, but that usually requires multiple tries. Note WHAMM means its still closed.\n- When your health gets low, run away before healing.\n- Corpses in your inventory will rot, do not eat them. Only eat freshly killed corpses. Keep eating corpses until satiated, but do not keep eating.\n- Do not eat kobolds, they are poisonous.\n- Only pray every 500 turns to fix bad situations, for example low health or when you are fainting.\n- Use the keys \"ykulnjbh\" for specifying the directions \"n ne e se s sw w nw\". For example press the key \"y\" to indicate north.\n- The skill \"type_text\" can be used to press multiple alphanumeric keys, use it to navigate menus faster.\n- To move onto a tile occupied by a friendly monster stand next to it and press \"m\". Use this for shopkeepers.\n- Dip long swords into fountains as a lawful character at level 5 or higher to get excalibur.\n- Sacrifice corpses at altars for a chance to get powerful artifacts.\n- You will timeout if you do not make progress for a while. So if something doesn't work on the first try, shift your focus onto something else.\n\nSkills:\n- press_key: Presses the given letter. For special keys only ESC, SPACE, and ENTER are supported. Params: (key: string)\n- type_text: Types the text by pressing the keys in order. Params: (text: string)\n\nResolve the popup by pressing keys.\nIf you want to close the popup abort it using ESC or confirm your choices using enter or space.\nOutput your response in the following JSON format:\n{\n    \"thoughts\": {\n        \"observations\": \"<Relevant observations from your last action. Pay close attention to what you set out to do and compare that to the games current state.>\",\n        \"reasoning\": \"<Plan ahead.>\",\n        \"speak\": \"<Summary of thoughts, to say to user>\"\n    }\n    \"skill\": {\n        \"name\": \"<The name of the skill>\",\n        \"<param1_name>\": \"<The value for this parameter>\",\n        \"<param2_name>\": \"<The value for this parameter>\",\n    }\n}",
+    "response": "{\n    \"thoughts\": {\n        \"observations\": \"I have a melon here, and I chose to eat it. However, it seems I need to confirm my choice to eat it. My health is full, and I am not hungry, so eating the melon may not be necessary right now.\",\n        \"reasoning\": \"Since I am not hungry, I should focus on exploring the area further. I can check out the nearby corridors or rooms instead of consuming food that I don't need.\",\n        \"speak\": \"I need to explore more instead of eating the melon since I'm not hungry.\"\n    },\n    \"skill\": {\n        \"name\": \"explore_level\"\n    }\n}",
+    "context": [
+        {
+            "system": "You hear some noises in the distance."
+        },
+        {
+            "system": "Skill 'go_to 8' completed: Reached the room with id 8"
+        },
+        {
+            "ai": "Let's grab that gold piece and see what happens next."
+        },
+        {
+            "system": "Executing skill 'pickup 24 15'."
+        },
+        {
+            "system": "Moving to (24,15)"
+        },
+        {
+            "system": "You see here 3 gold pieces."
+        },
+        {
+            "system": "$ - 3 gold pieces."
+        },
+        {
+            "system": "Skill 'pickup 24 15' completed"
+        },
+        {
+            "ai": "I've gathered some gold! Let's head to room 9 and see what we can find."
+        },
+        {
+            "system": "Executing skill 'go_to 9'."
+        },
+        {
+            "system": "Skill 'go_to 9' completed: Reached the room with id 9"
+        },
+        {
+            "ai": "I think it's time to head down the stairs and see what the next level has in store for me."
+        },
+        {
+            "system": "Executing skill 'down 15 13'."
+        },
+        {
+            "system": "Moving to (15,13)"
+        },
+        {
+            "system": "You descend the stairs.--More--"
+        },
+        {
+            "system": "Changed dungeon level from (0, 1) to (0, 2)\nFound a new room with ID 0"
+        },
+        {
+            "system": "Skill 'down 15 13' completed"
+        },
+        {
+            "ai": "Let's grab that tin opener and see what else we can find in this room."
+        },
+        {
+            "system": "Executing skill 'pickup 11 12'."
+        },
+        {
+            "system": "Moving to (11,12)"
+        },
+        {
+            "system": "You see here a tin opener."
+        },
+        {
+            "system": "i - a tin opener."
+        },
+        {
+            "system": "Skill 'pickup 11 12' completed"
+        },
+        {
+            "ai": "I've got a tin opener! Let's explore this room further."
+        },
+        {
+            "system": "Executing skill 'explore_level'."
+        },
+        {
+            "system": "Found a new corridor with ID 1"
+        },
+        {
+            "system": "Found a new room with ID 2"
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "This door is locked."
+        },
+        {
+            "system": "Found a new corridor with ID 3"
+        },
+        {
+            "system": "Found a new room with ID 4\nA melon appeared at (33,15)."
+        },
+        {
+            "system": "Interrupting skill to rethink because 'A melon appeared at (33,15).'."
+        },
+        {
+            "ai": "Let's check out the room with the melon!"
+        },
+        {
+            "system": "Executing skill 'go_to 4'."
+        },
+        {
+            "system": "Skill 'go_to 4' completed: Reached the room with id 4"
+        },
+        {
+            "ai": "Let's go check out that melon!"
+        },
+        {
+            "system": "Executing skill 'move_to 33 15'."
+        },
+        {
+            "system": "You see here a melon."
+        },
+        {
+            "system": "Skill 'move_to 33 15' completed: Reached position (33, 15)."
+        },
+        {
+            "ai": "I found a melon! I think I'll eat it to see if it helps me out."
+        },
+        {
+            "system": "Executing skill 'eat m'."
+        },
+        {
+            "system": "There is a melon here; eat it? [ynq] (n)"
+        },
+        {
+            "system": "Pressing key 'm'."
+        },
+        {
+            "system": "There is a melon here; eat it? [ynq] (n)"
+        },
+        {
+            "system": "Skill 'eat m' completed"
+        }
+    ]
+}
